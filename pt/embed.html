@@ -1,0 +1,615 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="http://www.generatione.eu/static/img/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-type">
+    <meta content="IE=10; chrome=1;" http-equiv="X-UA-Compatible">
+    <meta content="!" name="fragment">
+    <meta content="width=device-width" name="viewport">
+    <base target="_blank">
+    <link href='http://fonts.googleapis.com/css?family=Trocchi|Noto+Sans:400,700&subset=latin' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+  /**
+    * @license
+    *! H5F
+    * https://github.com/ryanseddon/H5F/
+    * Copyright (c) Ryan Seddon | Licensed MIT
+    */
+
+    (function(e,t){"function"==typeof define&&define.amd?define(t):e.H5F=t()})(this,function(){var e,t,a,i,n,r,s,l,u,o,c,d,v,f,p,m,h,g,b,y,w,C,N,A,E,$,k=document,x=k.createElement("input"),q=/^[a-zA-Z0-9.!#$%&'*+-\/=?\^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,M=/[a-z][\-\.+a-z]*:\/\//i,L=/^(input|select|textarea)$/i;return r=function(e,t){var a=!e.nodeType||!1,i={validClass:"valid",invalidClass:"error",requiredClass:"required",placeholderClass:"placeholder"};if("object"==typeof t)for(var r in i)t[r]===void 0&&(t[r]=i[r]);if(n=t||i,a)for(var l=0,u=e.length;u>l;l++)s(e[l]);else s(e)},s=function(a){var i,n=a.elements,r=n.length,s=!!a.attributes.novalidate;if(b(a,"invalid",u,!0),b(a,"blur",u,!0),b(a,"input",u,!0),b(a,"keyup",u,!0),b(a,"focus",u,!0),b(a,"change",u,!0),b(a,"click",o,!0),b(a,"submit",function(i){e=!0,t||s||a.checkValidity()||w(i)},!1),!v())for(a.checkValidity=function(){return c(a)};r--;)i=!!n[r].attributes.required,"fieldset"!==n[r].nodeName.toLowerCase()&&l(n[r])},l=function(e){var t=e,a=g(t),n={type:t.getAttribute("type"),pattern:t.getAttribute("pattern"),placeholder:t.getAttribute("placeholder")},r=/^(email|url)$/i,s=/^(input|keyup)$/i,l=r.test(n.type)?n.type:n.pattern?n.pattern:!1,u=f(t,l),o=m(t,"step"),v=m(t,"min"),h=m(t,"max"),b=!(""===t.validationMessage||void 0===t.validationMessage);t.checkValidity=function(){return c.call(this,t)},t.setCustomValidity=function(e){d.call(t,e)},t.validity={valueMissing:a,patternMismatch:u,rangeUnderflow:v,rangeOverflow:h,stepMismatch:o,customError:b,valid:!(a||u||o||v||h||b)},n.placeholder&&!s.test(i)&&p(t)},u=function(e){var t=C(e)||e,a=/^(input|keyup|focusin|focus|change)$/i,r=/^(submit|image|button|reset)$/i,s=/^(checkbox|radio)$/i,o=!0;!L.test(t.nodeName)||r.test(t.type)||r.test(t.nodeName)||(i=e.type,v()||l(t),t.validity.valid&&(""!==t.value||s.test(t.type))||t.value!==t.getAttribute("placeholder")&&t.validity.valid?(A(t,[n.invalidClass,n.requiredClass]),N(t,n.validClass)):a.test(i)?t.validity.valueMissing&&A(t,[n.requiredClass,n.invalidClass,n.validClass]):t.validity.valueMissing?(A(t,[n.invalidClass,n.validClass]),N(t,n.requiredClass)):t.validity.valid||(A(t,[n.validClass,n.requiredClass]),N(t,n.invalidClass)),"input"===i&&o&&(y(t.form,"keyup",u,!0),o=!1))},c=function(t){var a,i,n,r,s=!1;if("form"===t.nodeName.toLowerCase()){a=t.elements;for(var l=0,o=a.length;o>l;l++)i=a[l],n=!!i.attributes.required,r=!!i.attributes.pattern,"fieldset"!==i.nodeName.toLowerCase()&&(n||r&&n)&&(u(i),i.validity.valid||s||(e&&i.focus(),s=!0));return!s}return u(t),t.validity.valid},d=function(e){var t=this;t.validationMessage=e},o=function(e){var a=C(e);a.attributes.formnovalidate&&"submit"===a.type&&(t=!0)},v=function(){return E(x,"validity")&&E(x,"checkValidity")},f=function(e,t){if("email"===t)return!q.test(e.value);if("url"===t)return!M.test(e.value);if(t){var i=e.getAttribute("placeholder"),n=e.value;return a=RegExp("^(?:"+t+")$"),n===i?!1:""===n?!1:!a.test(e.value)}return!1},p=function(e){var t={placeholder:e.getAttribute("placeholder")},a=/^(focus|focusin|submit)$/i,r=/^(input|textarea)$/i,s=/^password$/i,l=!!("placeholder"in x);l||!r.test(e.nodeName)||s.test(e.type)||(""!==e.value||a.test(i)?e.value===t.placeholder&&a.test(i)&&(e.value="",A(e,n.placeholderClass)):(e.value=t.placeholder,b(e.form,"submit",function(){i="submit",p(e)},!0),N(e,n.placeholderClass)))},m=function(e,t){var a=parseInt(e.getAttribute("min"),10)||0,i=parseInt(e.getAttribute("max"),10)||!1,n=parseInt(e.getAttribute("step"),10)||1,r=parseInt(e.value,10),s=(r-a)%n;return g(e)||isNaN(r)?"number"===e.getAttribute("type")?!0:!1:"step"===t?e.getAttribute("step")?0!==s:!1:"min"===t?e.getAttribute("min")?a>r:!1:"max"===t?e.getAttribute("max")?r>i:!1:void 0},h=function(e){var t=!!e.attributes.required;return t?g(e):!1},g=function(e){var t=e.getAttribute("placeholder"),a=/^(checkbox|radio)$/i,i=!!e.attributes.required;return!(!i||""!==e.value&&e.value!==t&&(!a.test(e.type)||$(e)))},b=function(e,t,a,i){E(window,"addEventListener")?e.addEventListener(t,a,i):E(window,"attachEvent")&&window.event!==void 0&&("blur"===t?t="focusout":"focus"===t&&(t="focusin"),e.attachEvent("on"+t,a))},y=function(e,t,a,i){E(window,"removeEventListener")?e.removeEventListener(t,a,i):E(window,"detachEvent")&&window.event!==void 0&&e.detachEvent("on"+t,a)},w=function(e){e=e||window.event,e.stopPropagation&&e.preventDefault?(e.stopPropagation(),e.preventDefault()):(e.cancelBubble=!0,e.returnValue=!1)},C=function(e){return e=e||window.event,e.target||e.srcElement},N=function(e,t){var a;e.className?(a=RegExp("(^|\\s)"+t+"(\\s|$)"),a.test(e.className)||(e.className+=" "+t)):e.className=t},A=function(e,t){var a,i,n="object"==typeof t?t.length:1,r=n;if(e.className)if(e.className===t)e.className="";else for(;n--;)a=RegExp("(^|\\s)"+(r>1?t[n]:t)+"(\\s|$)"),i=e.className.match(a),i&&3===i.length&&(e.className=e.className.replace(a,i[1]&&i[2]?" ":""))},E=function(e,t){var a=typeof e[t],i=RegExp("^function|object$","i");return!!(i.test(a)&&e[t]||"unknown"===a)},$=function(e){for(var t=document.getElementsByName(e.name),a=0;t.length>a;a++)if(t[a].checked)return!0;return!1},{setup:r}});
+
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://www.generatione.eu/static/js/jquery.validate.js" type="text/javascript"></script> 
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $("#GoogleForm").validate({meta: "validate"});
+        });
+    </script>
+    
+    <link href='http://www.generatione.eu/static/css/foundation.css' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        ol, ul {
+          list-style: none;
+        }
+
+        body {
+            font-family: 'Noto Sans';
+            font-weight: 400;
+        }
+
+        h1, h2, h3, h4,
+        .ss-q-title label {
+            font-family: 'Trocchi';
+        }
+
+        /* Custom styles for generationE */
+
+        /* Header */
+
+        .header {
+            background: #202020 url('http://www.generatione.eu/static/img/header.jpg') no-repeat top right;
+            margin-bottom: 1.25rem;
+        }
+
+        .header ul {
+            margin: 0;
+        }
+
+        .header li {
+            display: inline-block;
+            vertical-align: middle;
+            font-family: 'Noto Sans';
+            font-weight: 700;
+            margin-right: 0.25rem;
+        }
+
+        .header .lang { font-family: 'Noto Sans'; font-weight: 400; }
+
+        .header li a {
+            display: block;
+            color: #fff;
+        }
+
+        .header .lang a { color: #e6b742; }
+
+        .header li + .lang { margin-left: 1rem; }
+        .header .lang + .lang { margin-left: 0rem; }
+
+        .header #logo {
+            border-right: 1px solid #daa520;
+            margin-right: 1rem;
+        }
+
+
+        /* Form */
+
+        .ss-required-asterisk {
+            color: #202020;
+            font-size: 60%;
+        }
+
+        .ss-form-heading {
+            margin-bottom: 1rem;
+        }
+
+        .ss-form-title {
+            line-height: 1;
+        }
+
+        .ss-form-heading p {
+            line-height: 1.2;
+            margin-bottom: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #daa520;
+        }
+
+        .ss-form-question {
+            padding-bottom: 0.75rem;
+        }
+
+        input[type="file"], select {
+            margin: 0 0 0.5rem;
+        }
+
+        input[type="radio"] {
+            margin: 0;
+        }
+
+        .required-message {
+            display: none;
+            font-size: 70%;
+        }
+
+        ul.ss-choices {
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+
+        ul.ss-choices label {
+            line-height: 1.2;
+        }
+
+        ul.ss-choices .ss-q-checkbox + label {
+            margin-right: 0;
+            margin-bottom: 0.5rem;
+            display: inline-flex;
+            width: 80%;
+        }
+
+        .ss-q-title label {
+            font-size: 1.375rem;
+            color: #daa520;
+            margin-bottom: 0.25rem;
+            line-height: 1.1;
+            cursor: text;
+        }
+
+        .ss-q-help label {
+            line-height: 1.3;
+            margin-bottom: 0.5rem;
+            cursor: text;
+        }
+
+        ul.ss-choices  .ss-q-other-toggle + label {
+            margin-right: 0.5rem;
+            display: inline;
+        }
+
+        input.ss-q-other {
+            display: inline-block;
+            width: auto;
+            height: 2.3125rem;
+        }
+
+        #ss-submit {
+            font-family: 'Noto Sans';
+            font-weight: 700;
+        }
+
+        /* Footer */
+
+        .ss-footer .ss-legal {
+            color: #666;
+        }
+
+        .powered-by-logo span,
+        .ss-terms p  {
+            margin-bottom: 0;
+            font-size: 70% !important;
+        }
+
+        .powered-by-logo,
+        .ss-terms {
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+    </style>
+    <script src="http://www.generatione.eu/static/js/vendor/modernizr.js"></script>
+
+    <title>Gera&ccedil;&atilde;o E, jovens emigrantes europeus</title>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55375386-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body class="ss-base-body pt" dir="ltr">
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="iframe_txlbrchf" id="iframe_txlbrchf" style="display:none;" onload="if(typeof sent_txlbrchf!='undefined') {window.location='http://generatione.eu/pt/embed-thankyou.html';}"></iframe>
+ 
+    <div class="ss-form-container">
+
+        <div class="ss-top-of-page">
+            <div class="ss-form-heading row collapse">
+                <h2 class="ss-form-title" dir="ltr">Gera&ccedil;&atilde;o E, jovens emigrantes europeus</h2>
+                <p>Recolha de histórias sobre jovens “expats” espanhóis, gregos, italianos e portugueses.</p>
+
+                <div class="ss-required-asterisk">
+                    * Obrigatório
+                </div>
+            </div>
+        </div>
+
+        <div class="ss-form">
+            <form action="https://docs.google.com/forms/d/1Uh_E3UuAHhes80XnV3IINgbOvrVzzF17Qt9mWJCp8gc/formResponse" id="ss-form" method="post" name="ss-form" target="iframe_txlbrchf" onsubmit="sent_txlbrchf=true">
+                <div class="ss-question-list row collapse">
+                    <!-- Coluna esquerda-->
+                    <div class="large-4 medium-4 columns">                    
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_434767791"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_434767791">De onde és?<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <ul class="ss-choices">
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_437183503_1" name="entry.437183503" required="" type="radio" value="Portugal"><label>Portugal</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_437183503_2" name="entry.437183503" required="" type="radio" value="Gr&eacute;cia"><label>Grécia</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_437183503_3" name="entry.437183503" required="" type="radio" value="Espanha"><label>Espanha</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_437183503_4" name="entry.437183503" required="" type="radio" value="It&aacute;lia"><label>Itália</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio ss-q-other-toggle" id="group_437183503_5" name="entry.437183503" required="" type="radio" value="__other_option__"><label>Outro:</label> <input class="ss-q-other" dir="auto" id="entry_437183503_other_option_response" name="entry.437183503.other_option_response" type="text" value="">
+                                    </li>
+                                </ul>
+
+                                <div class="error-message" id="434767791_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1320383379"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1320383379">Para onde te mudaste?<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                </div><input class="ss-q-short" dir="auto" id="entry_1320383379" name="entry.1320383379" required="" title="" placeholder="Cidade, País" type="text" value="">
+
+                                <div class="error-message" id="1477915949_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-select" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_290474545"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_290474545">Que idade tens?<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div><select id="entry_290474545" name="entry.290474545" required="">
+                                    <option value="">  </option>
+                                    <option value="20">20 ou menos</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40 ou mais</option>
+                                </select>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-select" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_64834425"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_64834425">Quando deixaste o teu país?<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label></label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+                                <select id="entry_64834425" name="entry.64834425" required="">
+                                    <option value=""> </option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                </select>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-checkbox" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1674331633"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1674331633">Seleciona os principais fatores que te levaram a viver no estrangeiro.<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label></label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <ul class="ss-choices ss-choices-required">
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox" id="group_1375043472_1" name="entry.1375043472" type="checkbox" value="Quest&otilde;es laborais (ex: desemprego, evolu&ccedil;&atilde;o na carreira)"><label>Questões laborais (ex: desemprego, evolução na carreira)</label>
+                                    </li>
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox" id="group_1375043472_2" name="entry.1375043472" type="checkbox" value="Motivos sentimentais"><label>Motivos sentimentais</label>
+                                    </li>
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox" id="group_1375043472_3" name="entry.1375043472" type="checkbox" value="Quest&otilde;es pol&iacute;ticas"><label>Questões políticas</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox" id="group_1375043472_4" name="entry.1375043472" type="checkbox" value="Ambi&ccedil;&otilde;es pessoais (aventura, curiosidade, sede de viajar&hellip;)"><label>Ambições pessoais (aventura, curiosidade, sede de viajar…)</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox" id="group_1375043472_5" name="entry.1375043472" type="checkbox" value="Educa&ccedil;&atilde;o (ex: Erasmus, mestrado, doutoramento, interc&acirc;mbio)"><label>Educação (ex: Erasmus, mestrado, doutoramento, intercâmbio)</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox ss-q-other-toggle" id="group_1375043472_6" name="entry.1375043472" type="checkbox" value="__other_option__"><label>Outro:</label> <input class="ss-q-other" dir="auto" id="entry_1375043472_other_option_response" name="entry.1375043472.other_option_response" type="text" value="">
+                                    </li>
+                                </ul>
+
+                                <div class="error-message" id="1674331633_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    
+                    </div><!-- /coluna esquerda -->
+                    <!-- Coluna direita -->
+                    <div class="large-8 medium-8 columns">
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-paragraph-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_880287869"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_880287869">Conta-nos a tua história.<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_880287869">Algumas pistas: A tua vida melhorou? Porquê? O que piorou? Sentes que és um cidadão europeu? Do que sentes mais falta do teu país? E menos? Costumas socializar com pessoas locais, do teu país ou outros “expats”? Sentes-te integrado? Discriminado? Algum episódio da tua vida no estrangeiro que queiras partilhar?</label>
+                                </div>
+                                <textarea class="ss-q-long" cols="0" dir="auto" id="entry_880287869" name="entry.880287869" required="" rows="8">
+</textarea>
+
+                                <div class="error-message" id="769139931_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1382914383"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1382914383">Tens formação superior?<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <div class="ss-choices">
+                                    <input class="ss-q-radio" id="group_1773519957_1" name="entry.1773519957" required="" type="radio" value="Sim"><label>Sim</label>
+                                    <input class="ss-q-radio" id="group_1773519957_2" name="entry.1773519957" required="" type="radio" value="Ainda n&atilde;o"><label>Ainda não</label>
+                                    <input class="ss-q-radio" id="group_1773519957_3" name="entry.1773519957" required="" type="radio" value="N&atilde;o"><label>Não</label>
+                                </div>
+
+                                <div class="error-message" id="1382914383_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_39120652"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_39120652">Se sim, qual o grau e a área de especialização?</label>
+                                </div><label class="ss-q-item-label" for="entry_39120652"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_39120652"></label>
+                                </div><input class="ss-q-short" dir="auto" id="entry_39120652" name="entry.39120652" title="" type="text" value="">
+
+                                <div class="error-message" id="2092023300_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1012103099"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1012103099">Vais voltar ao teu país em algum momento?<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <ul class="ss-choices">
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_732995637_1" name="entry.732995637" required="" type="radio" value="Sim, no per&iacute;odo de 1 ano"><label>Sim, no período de 1 ano</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_732995637_2" name="entry.732995637" required="" type="radio" value="Sim, 1-2 anos"><label>Sim, 1-2 anos</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_732995637_3" name="entry.732995637" required="" type="radio" value="Sim, 2-5 anos"><label>Sim, 2-5 anos</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_732995637_4" name="entry.732995637" required="" type="radio" value="Sim, 5-10 anos"><label>Sim, 5-10 anos</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_732995637_5" name="entry.732995637" required="" type="radio" value="Sim, 10+ anos"><label>Sim, 10+ anos</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_732995637_6" name="entry.732995637" required="" type="radio" value="Espero que sim"><label>Espero que sim</label>
+                                    </li>
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_732995637_7" name="entry.732995637" required="" type="radio" value="N&atilde;o"><label>Não</label>
+                                    </li>
+                                </ul>
+
+                                <div class="error-message" id="1012103099_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1608410998"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1608410998">Estás inscrito no registo civil ou consulado?<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <div class="ss-choices">
+                                    <input class="ss-q-radio" id="group_1585335229_1" name="entry.1585335229" required="" type="radio" value="Sim"><label>Sim</label>
+
+                                    <input class="ss-q-radio" id="group_1585335229_2" name="entry.1585335229" required="" type="radio" value="N&atilde;o"><label>Não</label>
+                                </div>
+
+                                <div class="error-message" id="1608410998_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1055401600"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1055401600">Nome e email.</label>
+                                </div><label class="ss-q-item-label" for="entry_1055401600"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_1055401600">Opcional — não vai ser publicado. Vamos usá-lo para entrar em contacto assim que sejam publicados os resultados do projecto e, caso necessário, para saber mais sobre a tua história. Caso nos dês esta informação, os dados serão tratados em conformidade com a norma europeia e estatal de protecção de dados pessoais com a única finalidade expressa no formulário. Para exercitares os teus direitos de acesso, rectificação, cancelamento e oposição podes enviar um pedido para o endereço de correio electrónico generation.e.project at gmail.com.</label>
+                                </div><input class="ss-q-short" dir="auto" id="entry_1055401600" name="entry.1055401600" title="" type="text" value="">
+
+                                <div class="error-message" id="1741987477_errorMessage"></div>
+
+                                <div class="required-message">
+                                    Esta pergunta é de resposta obrigatória
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    </div><!-- /coluna direita --><input name="draftResponse" type="hidden" value="[,,&quot;8851618263720282072&quot;] "> <input name="pageHistory" type="hidden" value="0"> <input name="fbzx" type="hidden" value="8851618263720282072">
+
+                    <div class="ss-item ss-navigate">
+                        <div class="large-12 medium-12 columns">
+                            <input class="jfk-button jfk-button-action button large-12 columns" id="ss-submit" name="submit" type="submit" value="Enviar">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="ss-footer">
+            <div class="ss-legal row">
+                <div class="disclaimer large-12 medium-12 columns" dir="ltr">
+                    <div class="powered-by-logo">
+                        <span class="powered-by-text">Powered by</span> <span class="aria-only-help">Google Forms</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="docs-a11y-ariascreenreader-speakable docs-offscreen" id="docs-aria-speakable"></div>
+    </div>
+</body>
+</html>
