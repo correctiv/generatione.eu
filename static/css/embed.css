@@ -1,0 +1,155 @@
+ol, ul {
+  list-style: none;
+}
+
+body {
+    font-family: 'Noto Sans';
+    font-weight: 400;
+}
+
+h1, h2, h3, h4,
+.ss-q-title label {
+    font-family: 'Trocchi';
+}
+
+/* Custom styles for generationE */
+
+/* Header */
+
+.header {
+    background: #202020 url('http://www.generatione.eu/static/img/header.jpg') no-repeat top right;
+    margin-bottom: 1.25rem;
+}
+
+.header ul {
+    margin: 0;
+}
+
+.header li {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    margin-right: 0.25rem;
+}
+
+.header .lang { font-family: 'Noto Sans'; font-weight: 400; }
+
+.header li a {
+    display: block;
+    color: #fff;
+}
+
+.header .lang a { color: #e6b742; }
+
+.header li + .lang { margin-left: 1rem; }
+.header .lang + .lang { margin-left: 0rem; }
+
+.header #logo {
+    border-right: 1px solid #daa520;
+    margin-right: 1rem;
+}
+
+
+/* Form */
+
+.ss-required-asterisk {
+    color: #202020;
+    font-size: 60%;
+}
+
+.ss-form-heading {
+    margin-bottom: 1rem;
+}
+
+.ss-form-title {
+    line-height: 1;
+}
+
+.ss-form-heading p {
+    line-height: 1.2;
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #daa520;
+}
+
+.ss-form-question {
+    padding-bottom: 0.75rem;
+}
+
+input[type="file"], select {
+    margin: 0 0 0.5rem;
+}
+
+input[type="radio"] {
+    margin: 0;
+}
+
+.required-message {
+    display: none;
+    font-size: 70%;
+}
+
+ul.ss-choices {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+ul.ss-choices label {
+    line-height: 1.2;
+}
+
+ul.ss-choices .ss-q-checkbox + label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    width: 80%;
+}
+
+.ss-q-title label {
+    font-size: 1.375rem;
+    color: #daa520;
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+    cursor: text;
+}
+
+.ss-q-help label {
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    cursor: text;
+}
+
+ul.ss-choices  .ss-q-other-toggle + label {
+    margin-right: 0.5rem;
+    display: inline;
+}
+
+input.ss-q-other {
+    display: inline-block;
+    width: auto;
+    height: 2.3125rem;
+}
+
+#ss-submit {
+    font-family: 'Noto Sans';
+    font-weight: 700;
+}
+
+/* Footer */
+
+.ss-footer .ss-legal {
+    color: #666;
+}
+
+.powered-by-logo span,
+.ss-terms p  {
+    margin-bottom: 0;
+    font-size: 70% !important;
+}
+
+.powered-by-logo,
+.ss-terms {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
