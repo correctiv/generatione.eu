@@ -1,0 +1,34 @@
+baseurl: /
+markdown: kramdown
+
+translations:
+  en:
+    about: About
+    contact: Contact
+    required: This is a required question
+    required_star: Required
+    submit: Submit
+  el:
+    about: Ποιοι είμαστε
+    contact: Επικοινωνία
+    required: Αυτή η ερώτηση είναι υποχρεωτική
+    required_star: Αυτή η ερώτηση είναι υποχρεωτική
+    submit: Αποστολή
+  es:
+    about: Acerca de
+    contact: Contacto
+    required: Pregunta obligatoria
+    required_star: Esta pregunta es obligatoria.
+    submit: Envia
+  it:
+    about: Acerca de
+    contact: Contatti
+    required: Questa domanda è obbligatoria.
+    required_star: Campi obbligatori.
+    submit: Invia
+  pt:
+    about: Sobre nós
+    contact: Contacto
+    required: Esta pergunta é de resposta obrigatória
+    required_star: Obrigatório
+    submit: Enviar

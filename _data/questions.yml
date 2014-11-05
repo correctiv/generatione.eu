@@ -1,0 +1,155 @@
+en:
+  - label: Where are you from?
+    name: "entry.1215076149"
+    choices:
+      - label: Portugal
+        value: Portugal
+      - label: Greece
+        value: Greece
+      - label: Spain
+        value: Spain
+      - label: Italy
+        value: Italy
+    choice_other: Other
+  - label: Where have you moved to?
+    placeholder: City, Country
+    name: entry.1534156908
+  - label: How old are you?
+    name: entry.1540626434
+    choice_min: 20 or younger
+    choice_max: 40 or older
+  - label: When did you leave your country?
+    name: entry.538270125
+  - label: Select the driving factors that brought you to live abroad
+    name: entry.1400018492
+    choices:
+      - label: "Work-related issues (e.g., unemployment, career-development, difficult perspectives)"
+        value: work
+      - label: "Sentimental reasons"
+        value: sentimental
+      - label: Political issues
+        value: political
+      - label: Personal ambitions (adventure, curiosity, wanderlust…)
+        value: personal
+      - label: Education (e.g. Masters, PhD, Student Exchange, Erasmus)
+        value: education
+    choice_other: Other
+  - label: Tell us your story
+    description: "E.g.: Why is your life better and why worse? Do you feel a European citizen? What do you miss the most and what the least of your country? Do you socialize with locals, people from the same country or other expats? Do you feel integrated or discriminated? An episode of your life abroad you think it’s worth sharing?"
+    name: entry.2119500459
+  - label: Are you graduated?
+    name: entry.789111768
+    choices:
+      - label: "Yes"
+        value: "yes"
+      - label: "Not yet"
+        value: notyet
+      - label: "No"
+        value: "no"
+  - label: If yes, which faculty?
+    name: entry.784059732
+  - label: Will you go back to your country at some point?
+    name: entry.582831266
+    choices:
+      - label: Yes, in 10+ years
+        value: 10+
+      - label: Yes, within 5-10 years
+        value: 5-10
+      - label: Yes, within 2-5 years
+        value: 2-5
+      - label: Yes, within 1-2 years
+        value: 1-2
+      - label: Yes, within 1 year
+        value: 1
+      - label: Hope so
+        value: hope
+      - label: "No"
+        value: "no"
+  - label: Are you recorded at the civil registry or consulate?
+    name: entry.694591779
+    choices:
+      - label: "Yes"
+        value: "yes"
+      - label: "No"
+        value: "no"
+  - label: Your name and email address
+    description: Optional —  it won’t be published, we’ll use it to get in touch with you and know more about your story. We’ll also share with you the results of our project.
+    name: entry.694591779
+
+el:
+  - label: Από που είσαι;
+    name: "entry.1215076149"
+    choices:
+      - label: Πορτογαλία
+        value: Portugal
+      - label: Ελλάδα
+        value: Greece
+      - label: Ισπανία
+        value: Spain
+      - label: Ιταλία
+        value: Italy
+    choice_other: Άλλο
+  - label: Που έχεις μεταναστεύσει;
+    placeholder: πόλη, χώρα
+    name: entry.1534156908
+  - label: Τι ηλικία έχεις;
+    name: entry.1540626434
+    choice_min: 20 ή λιγότερο
+    choice_max: 40 ή περισσότερο
+  - label: Πότε έφυγες από τη χώρα σου;
+    name: entry.538270125
+  - label: Επέλεξε τα κίνητρα τα οποία σε οδήγησαν να ζήσεις στο εξωτερικό
+    name: entry.1400018492
+    choices:
+      - label: "Εργασιακοί λόγοι (π.χ. ανεργία, δημιουργία/προώθηση καριέρας, δύσκολες προοπτικές)"
+        value: work
+      - label: "Συναισθηματικοί λόγοι"
+        value: sentimental
+      - label: Πολιτικοί λόγοι
+        value: political
+      - label: Προσωπικές αναζητήσεις (περιπέτεια, περιέργεια, wanderlust…)
+        value: personal
+      - label: Εκπαιδευτικοί λόγοι (π.χ. Masters, PhD, Φοιτητικές Ανταλλαγές, Erasmus)
+        value: education
+    choice_other: Άλλο
+  - label: Πες μας την ιστορία σου.
+    description: "π.χ.: Γιατί έχει βελτιωθεί η ζωή σου και γιατί έχει επιδεινωθεί; Αιθάνεσαι Ευρωπαίος Πολίτης; Τι σου λείπει περισσότερο και τι λιγότερο από τη χώρα σου; Έχεις κοινωνικές σχέσεις με ντόπιους, συμπατριώτες σου ή άλλους μετανάστες; Νιώθεις πως έχεις ενσωματωθεί; Έχεις υποστεί διακρίσεις; Υπάρχει κάποιο περιστατικό της ζωής σου στο εξωτερικό που θα ήθελες να μοιραστείς μαζί μας;"
+    name: entry.2119500459
+  - label: Είσαι απόφοιτος τριτοβάθμιας εκπαίδευσης;
+    name: entry.789111768
+    choices:
+      - label: "Ναι"
+        value: "yes"
+      - label: "Όχι ακόμα"
+        value: notyet
+      - label: "Όχι"
+        value: "no"
+  - label: Αν ναι, σε ποιο πανεπιστήμιο/τμήμα;
+    name: entry.784059732
+  - label: Θα επιστρέψεις κάποια στιγμή στη χώρα σου;
+    name: entry.582831266
+    choices:
+      - label: Σε 10+ χρόνια
+        value: 10+
+      - label: Σε 5-10 χρόνια
+        value: 5-10
+      - label: Σε 2-5 χρόνια
+        value: 2-5
+      - label: Σε 1-2 χρόνια
+        value: 1-2
+      - label: Εντός ενός έτους
+        value: 1
+      - label: Το ελπίζω
+        value: hope
+      - label: "Όχι"
+        value: "no"
+  - label: Έχεις εγγραφεί σε κάποια δημόσια υπηρεσία ή σε προξενείο στη χώρα παραμονής σου;
+    name: entry.694591779
+    choices:
+      - label: "Όχι"
+        value: "yes"
+      - label: "Ναι"
+        value: "no"
+  - label: "Όνομα και ηλεκτρονική διεύθυνση"
+    description: προαιρετικά —  δεν θα δημοσιευτούν, θα χρησιμοποιηθούν ώστε να έρθουμε σε επαφή μαζί σου και να μάθουμε την ιστορία σου. Επιπλέον θα χρησιμοποιηθούν για να σε ενημερώσουμε για τα αποτελέσματα της έρευνάς μας και, εάν χρειαστεί, για να σου κάνουμε κάποια επιπρόσθετη ερώτηση σχετικά με την ιστορία σου. Σε περίπτωση που μας απαντήσεις τα στοιχεία που θα μας παρέχεις θα αντιμετωπιστούν σύμφωνα με την εθνική και ευρωπαϊκή νομοθεσία για την προστασία των προσωπικών δεδομενων, με αποκλειστικό σκοπό αυτόν που περιγράφεται στο ερωτηματολόγιο. Για να ασκήσεις το δικαίωμα της πρόσβασης, διόρθωσης, ακύρωσης ή αντίρρησης μπορείς να επικοινωνήσεις μαζί μας στην ηλεκτρονική διεύθυνση generation.e.project at gmail.com
+    name: entry.694591779

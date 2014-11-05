@@ -1,0 +1,348 @@
+---
+layout: default
+
+---
+
+{% assign questions=site.data.questions[page.language] %}
+
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="iframe_txlbrchf" id="iframe_txlbrchf" style="display:none;" onload="if(typeof sent_txlbrchf!='undefined') {window.location='http://generatione.eu/{{ page.language }}/thankyou.html';}"></iframe>
+
+    <div class="ss-form-container">
+        <div class="ss-top-of-page">
+            <div class="ss-form-heading row collapse">
+                <h2 class="ss-form-title" dir="ltr">{{ page.headline }}</h2>
+                <p>{{ page.sub_headline }}</p>
+
+                <div class="ss-required-asterisk">
+                    * {{ site.translations[page.language].required_star }}
+                </div>
+            </div>
+        </div>
+
+        <div class="ss-form">
+            <form action="{{ page.form_action }}" id="ss-form" method="post" name="ss-form" target="iframe_txlbrchf" onsubmit="sent_txlbrchf=true">
+                <div class="ss-question-list row collapse">
+                    <!-- Coluna esquerda-->
+                    <div class="large-4 medium-4 columns">
+                    {% assign question=questions[0] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_160901653"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_160901653">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <ul class="ss-choices">
+                                  {% for choice in question.choices %}
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_1215076149_1" name="{{ question.name }}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label></li>
+                                  {% endfor %}
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio ss-q-other-toggle" id="group_1215076149_5" name="{{ question.name }}" required="" type="radio" value="__other_option__"><label>{{ question.choice_other }}:</label> <input class="ss-q-other" dir="auto" id="entry_1215076149_other_option_response" name="{{ question.name }}.other_option_response" type="text" value=""></li>
+                                </ul>
+
+                                <div class="error-message" id="160901653_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[1] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1534156908"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1534156908">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                </div><input class="ss-q-short" dir="auto" id="entry_1534156908" name="{{ question.name }}" required="" title="" placeholder="{{ question.placeholder }}" type="text" value="">
+
+                                <div class="error-message" id="181400268_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[2] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-select" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1540626434"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1540626434">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div><select id="entry_1540626434" name="{{ question.name }}" required="">
+                                    <option value="">
+                                        </option>
+
+                                    <option value="20">
+                                        {{ question.choice_min }}
+                                    </option>
+                                    {% for i in (21..39) %}
+                                    <option value="{{ i }}">
+                                        {{ i }}
+                                    </option>
+                                    {% endfor %}
+
+                                    <option value="40">
+                                        {{ question.choice_max }}
+                                    </option>
+                                </select>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[3] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-select" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_538270125"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_538270125">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div><select id="entry_538270125" name="{{ question.name }}" required="">
+                                    <option value="">
+                                        </option>
+                                    {% for i in (1995..2014) reversed %}
+                                    <option value="{{ i }}">
+                                        {{ i }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[4] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-checkbox" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_146581853"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_146581853">{{ question.label }}:<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <ul class="ss-choices ss-choices-required">
+                                    {% for choice in question.choices %}
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox" id="group_1400018492_1" name="{{ question.name }}" type="checkbox" value="{{ choice.value }}"><label>{{ choice.label }}</label></li>
+                                    {% endfor %}
+
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-checkbox ss-q-other-toggle" id="group_1400018492_6" name="{{ question.name }}" type="checkbox" value="__other_option__"><label>{{ question.choice_other }}:</label> <input class="ss-q-other" dir="auto" id="entry_1400018492_other_option_response" name="{{ question.name }}.other_option_response" type="text" value=""></li>
+                                </ul>
+
+                                <div class="error-message" id="146581853_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    </div><!-- /coluna esquerda -->
+                    <!-- Coluna direita -->
+                    <div class="large-8 medium-8 columns">
+                    {% assign question=questions[5] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-paragraph-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_2119500459"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_2119500459">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_2119500459">{{ question.description }}</label>
+                                </div>
+                                <textarea class="ss-q-long" cols="0" dir="auto" id="entry_2119500459" name="{{ question.name }}" required="" rows="8">
+</textarea>
+
+                                <div class="error-message" id="523352133_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[6] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1044726631"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1044726631">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <div class="ss-choices">
+                                    {% for choice in question.choices %}
+                                    <input class="ss-q-radio" id="group_789111768_1" name="{{ question.name }}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="error-message" id="1044726631_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[7] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_784059732">{{ question.label }}</label>
+                                </div><label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_784059732"></label>
+                                </div><input class="ss-q-short" dir="auto" id="entry_784059732" name="{{ question.name }}" title="" type="text" value="">
+
+                                <div class="error-message" id="1891949306_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[8] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1360717968"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1360717968">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <ul class="ss-choices">
+                                    {% for choice in question.choices %}
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_582831266_1" name="{{ question.name}}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label></li>
+                                    {% endfor %}
+                                </ul>
+
+                                <div class="error-message" id="1360717968_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[9] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_255117404"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_255117404">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <div class="ss-choices">
+                                  {% for choice in question.choices %}
+                                    <input class="ss-q-radio" id="group_694591779_1" name="{{ question.name }}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label>
+                                  {% endfor %}
+                                </div>
+
+                                <div class="error-message" id="255117404_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    {% assign question=questions[10] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_782757880"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_782757880">{{ question.label }}:</label>
+                                </div><label class="ss-q-item-label" for="entry_782757880"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_782757880">{{ question.description }}</label>
+                                </div><input class="ss-q-short" dir="auto" id="entry_782757880" name="entry.782757880" title="" type="text" value="">
+
+                                <div class="error-message" id="1551437931_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+                    </div><!-- /coluna direita --><input name="draftResponse" type="hidden" value="[,,&quot;5690517492085032966&quot;] "> <input name="pageHistory" type="hidden" value="0"> <input name="fbzx" type="hidden" value="5690517492085032966">
+
+                    <div class="ss-item ss-navigate">
+                        <div class="large-12 medium-12 columns">
+                            <input class="jfk-button jfk-button-action button large-12 columns" id="ss-submit" name="submit" type="submit" value="{{ site.translations[page.language].submit }}">
+                            <!--<div class="ss-password-warning ss-secondary-text">
+                                Never submit passwords through Google Forms.
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        {% unless page.embed %}
+        <div class="row">
+            <div id="share" class="large-12 medium-12 columns">
+                <div class='share-button'>
+                    <!--Twitter-->
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://generatione.eu/{{ page.language }}" data-hashtags="GenerationE" data-dnt="true">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                </div>
+                <div class='share-button'>
+                    <!-- Facebook -->
+                    <!--<iframe src="http://www.facebook.com/plugins/like.php?locale=pt_BR&href=http%3A%2F%2Fgeneratione.eu%2F{{ page.language }}%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>-->
+                    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fgeneratione.eu%2F{{ page.language }}%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+        {% endunless %}
