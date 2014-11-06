@@ -11,8 +11,8 @@ layout: default
     <div class="ss-form-container">
         <div class="ss-top-of-page">
             <div class="ss-form-heading row collapse">
-                <h2 class="ss-form-title" dir="ltr">{{ page.headline }}</h2>
-                <p>{{ page.sub_headline }}</p>
+                <h2 class="ss-form-title" dir="ltr">{{ site.translations[page.language].headline }}</h2>
+                <p>{{ site.translations[page.language].sub_headline }}</p>
 
                 <div class="ss-required-asterisk">
                     * {{ site.translations[page.language].required_star }}

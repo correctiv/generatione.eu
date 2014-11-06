@@ -8,27 +8,47 @@ translations:
     required: This is a required question
     required_star: Required
     submit: Submit
+    title: Generation E, the european young expats
+    headline: European Youth Migration Data-driven Investigative Project
+    sub_headline: Crowdsourcing stories from Spanish, Italian, Portuguese and Greek expats.
+    form_action: https://docs.google.com/forms/d/1AYU7qLOGf8IniifdletWEl3y_9Km674Bf_q_kZ7wVcw/formResponse
   el:
     about: Ποιοι είμαστε
     contact: Επικοινωνία
     required: Αυτή η ερώτηση είναι υποχρεωτική
     required_star: Αυτή η ερώτηση είναι υποχρεωτική
     submit: Αποστολή
+    title: Generation E, οι ευρωπαίοι νέοι μετανάστες
+    headline: Δημοσιογραφική Έρευνα Δεδομένων Νεανικής Ευρωπαϊκής Μετανάστευσης
+    sub_headline: Συλλέγοντας ιστορίες από Ισπανούς, Ιταλούς, Πορτογάλους και Έλληνες νέους μετανάστες.
+    form_action: https://docs.google.com/forms/d/1HOQ2A-Y5p3-DKyOZJ8xuvAInwLo4OkaW7KheOtnEdZg/formResponse
   es:
     about: Acerca de
     contact: Contacto
     required: Pregunta obligatoria
     required_star: Esta pregunta es obligatoria.
     submit: Envia
+    title: Generación E, los jóvenes expatriados europeos
+    headline: La emigración de los jóvenes del sur de Europa, en datos
+    sub_headline: Historia colaborativa de los expatriados españoles, italianos, griegos y portugueses
+    form_action: https://docs.google.com/forms/d/1xN0rQMoq3R0xzG4WMzAP27HuZaLmlRim6mRX5MF2cCg/formResponse
   it:
     about: Acerca de
     contact: Contatti
     required: Questa domanda è obbligatoria.
     required_star: Campi obbligatori.
     submit: Invia
+    title: Generazione E, i giovani expat europei
+    headline: Generazione E, i giovani expat europei
+    sub_headline: Una campagna crowdsourcing per raccogliere storie di giovani migranti italiani, spagnoli, portoghesi e greci
+    form_action: https://docs.google.com/forms/d/1-m4f81zt0TQRbV0IuD1kSJACnp8pWGjFq-FYuHZxxOg/formResponse
   pt:
     about: Sobre nós
     contact: Contacto
     required: Esta pergunta é de resposta obrigatória
     required_star: Obrigatório
     submit: Enviar
+    title: Geração E, jovens emigrantes europeus
+    headline: Geração E, jovens emigrantes europeus
+    sub_headline: Recolha de histórias sobre jovens espanhóis, gregos, italianos e portugueses que deixaram o país de origem nos últimos anos.
+    form_action: https://docs.google.com/forms/d/1Uh_E3UuAHhes80XnV3IINgbOvrVzzF17Qt9mWJCp8gc/formResponse
