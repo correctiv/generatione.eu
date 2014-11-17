@@ -1,5 +1,32 @@
+all:
+  form_action: "https://docs.google.com/forms/d/1N1tS7e0TnpgbNVw-AiWdSGUntV5ncbF0dVhFQF8nIKs/formResponse"
+  from:
+    name: "entry.11170349"
+  to:
+    name: "entry.1878870664"
+  age:
+    name: "entry.1678954915"
+  when:
+    name: "entry.1692934147"
+  why:
+    name: "entry.1601480224"
+  story:
+    name: "entry.1147170824"
+  graduated:
+    name: "entry.1924092624"
+  faculty:
+    name: "entry.1710563149"
+  goback:
+    name: "entry.2056425962"
+  registered:
+    name: "entry.1451489277"
+  name:
+    name: "entry.157648082"
+  language:
+    name: "entry.1063892500"
 en:
-  - label: Where are you from?
+  from:
+    label: Where are you from?
     name: "entry.1215076149"
     choices:
       - label: Portugal
@@ -11,16 +38,20 @@ en:
       - label: Italy
         value: Italy
     choice_other: Other
-  - label: Where have you moved to?
+  to:
+    label: Where have you moved to?
     placeholder: City, Country
     name: entry.1534156908
-  - label: How old are you?
+  age:
+    label: How old are you?
     name: entry.1540626434
     choice_min: 20 or younger
     choice_max: 40 or older
-  - label: When did you leave your country?
+  when:
+    label: When did you leave your country?
     name: entry.538270125
-  - label: Select the driving factors that brought you to live abroad
+  why:
+    label: Select the driving factors that brought you to live abroad
     name: entry.1400018492
     choices:
       - label: "Work-related issues (e.g., unemployment, career-development, difficult perspectives)"
@@ -34,10 +65,12 @@ en:
       - label: Education (e.g. Masters, PhD, Student Exchange, Erasmus)
         value: education
     choice_other: Other
-  - label: Tell us your story
+  story:
+    label: Tell us your story
     description: "E.g.: Why is your life better and why worse? Do you feel a European citizen? What do you miss the most and what the least of your country? Do you socialize with locals, people from the same country or other expats? Do you feel integrated or discriminated? An episode of your life abroad you think it’s worth sharing?"
     name: entry.2119500459
-  - label: Are you graduated?
+  graduated:
+    label: Are you graduated?
     name: entry.789111768
     choices:
       - label: "Yes"
@@ -46,9 +79,11 @@ en:
         value: notyet
       - label: "No"
         value: "no"
-  - label: If yes, which faculty?
+  faculty:
+    label: If yes, which faculty?
     name: entry.784059732
-  - label: Will you go back to your country at some point?
+  goback:
+    label: Will you go back to your country at some point?
     name: entry.582831266
     choices:
       - label: Yes, in 10+ years
@@ -65,19 +100,22 @@ en:
         value: hope
       - label: "No"
         value: "no"
-  - label: Are you recorded at the civil registry or consulate?
+  registered:
+    label: Are you recorded at the civil registry or consulate?
     name: entry.694591779
     choices:
       - label: "Yes"
         value: "yes"
       - label: "No"
         value: "no"
-  - label: Your name and email address
+  name:
+    label: Your name and email address
     description: Optional —  it won’t be published, we’ll use it to get in touch with you and know more about your story. We’ll also share with you the results of our project.
     name: entry.694591779
 
 el:
-  - label: Από που είσαι;
+  from:
+    label: Από που είσαι;
     name: "entry.1215076149"
     choices:
       - label: Πορτογαλία
@@ -89,16 +127,20 @@ el:
       - label: Ιταλία
         value: Italy
     choice_other: Άλλο
-  - label: Που έχεις μεταναστεύσει;
+  to:
+    label: Που έχεις μεταναστεύσει;
     placeholder: πόλη, χώρα
     name: entry.1534156908
-  - label: Τι ηλικία έχεις;
+  age:
+    label: Τι ηλικία έχεις;
     name: entry.1540626434
     choice_min: 20 ή λιγότερο
     choice_max: 40 ή περισσότερο
-  - label: Πότε έφυγες από τη χώρα σου;
+  when:
+    label: Πότε έφυγες από τη χώρα σου;
     name: entry.538270125
-  - label: Επέλεξε τα κίνητρα τα οποία σε οδήγησαν να ζήσεις στο εξωτερικό
+  why:
+    label: Επέλεξε τα κίνητρα τα οποία σε οδήγησαν να ζήσεις στο εξωτερικό
     name: entry.1400018492
     choices:
       - label: "Εργασιακοί λόγοι (π.χ. ανεργία, δημιουργία/προώθηση καριέρας, δύσκολες προοπτικές)"
@@ -112,10 +154,12 @@ el:
       - label: Εκπαιδευτικοί λόγοι (π.χ. Masters, PhD, Φοιτητικές Ανταλλαγές, Erasmus)
         value: education
     choice_other: Άλλο
-  - label: Πες μας την ιστορία σου.
+  story:
+    label: Πες μας την ιστορία σου.
     description: "π.χ.: Γιατί έχει βελτιωθεί η ζωή σου και γιατί έχει επιδεινωθεί; Αιθάνεσαι Ευρωπαίος Πολίτης; Τι σου λείπει περισσότερο και τι λιγότερο από τη χώρα σου; Έχεις κοινωνικές σχέσεις με ντόπιους, συμπατριώτες σου ή άλλους μετανάστες; Νιώθεις πως έχεις ενσωματωθεί; Έχεις υποστεί διακρίσεις; Υπάρχει κάποιο περιστατικό της ζωής σου στο εξωτερικό που θα ήθελες να μοιραστείς μαζί μας;"
     name: entry.2119500459
-  - label: Είσαι απόφοιτος τριτοβάθμιας εκπαίδευσης;
+  graduated:
+    label: Είσαι απόφοιτος τριτοβάθμιας εκπαίδευσης;
     name: entry.789111768
     choices:
       - label: "Ναι"
@@ -124,9 +168,11 @@ el:
         value: notyet
       - label: "Όχι"
         value: "no"
-  - label: Αν ναι, σε ποιο πανεπιστήμιο/τμήμα;
+  faculty:
+    label: Αν ναι, σε ποιο πανεπιστήμιο/τμήμα;
     name: entry.784059732
-  - label: Θα επιστρέψεις κάποια στιγμή στη χώρα σου;
+  goback:
+    label: Θα επιστρέψεις κάποια στιγμή στη χώρα σου;
     name: entry.582831266
     choices:
       - label: Σε 10+ χρόνια
@@ -143,19 +189,22 @@ el:
         value: hope
       - label: "Όχι"
         value: "no"
-  - label: Έχεις εγγραφεί σε κάποια δημόσια υπηρεσία ή σε προξενείο στη χώρα παραμονής σου;
+  registered:
+    label: Έχεις εγγραφεί σε κάποια δημόσια υπηρεσία ή σε προξενείο στη χώρα παραμονής σου;
     name: entry.694591779
     choices:
       - label: "Όχι"
         value: "yes"
       - label: "Ναι"
         value: "no"
-  - label: "Όνομα και ηλεκτρονική διεύθυνση"
+  name:
+    label: "Όνομα και ηλεκτρονική διεύθυνση"
     description: προαιρετικά —  δεν θα δημοσιευτούν, θα χρησιμοποιηθούν ώστε να έρθουμε σε επαφή μαζί σου και να μάθουμε την ιστορία σου. Επιπλέον θα χρησιμοποιηθούν για να σε ενημερώσουμε για τα αποτελέσματα της έρευνάς μας και, εάν χρειαστεί, για να σου κάνουμε κάποια επιπρόσθετη ερώτηση σχετικά με την ιστορία σου. Σε περίπτωση που μας απαντήσεις τα στοιχεία που θα μας παρέχεις θα αντιμετωπιστούν σύμφωνα με την εθνική και ευρωπαϊκή νομοθεσία για την προστασία των προσωπικών δεδομενων, με αποκλειστικό σκοπό αυτόν που περιγράφεται στο ερωτηματολόγιο. Για να ασκήσεις το δικαίωμα της πρόσβασης, διόρθωσης, ακύρωσης ή αντίρρησης μπορείς να επικοινωνήσεις μαζί μας στην ηλεκτρονική διεύθυνση generation.e.project at gmail.com
     name: entry.694591779
 
 es:
-  - label: ¿De dónde eres?
+  from:
+    label: ¿De dónde eres?
     name: "entry.1215076149"
     choices:
       - label: Portugal
@@ -167,16 +216,20 @@ es:
       - label: Italia
         value: Italy
     choice_other: Otro
-  - label: ¿Adónde te has mudado?
+  to:
+    label: ¿Adónde te has mudado?
     placeholder: País y Ciudad
     name: entry.1534156908
-  - label: ¿Cuántos años tienes?
+  age:
+    label: ¿Cuántos años tienes?
     name: entry.1540626434
     choice_min: 20 o menos
     choice_max: 40 o más
-  - label: ¿Cuándo dejaste tu país de origen?
+  when:
+    label: ¿Cuándo dejaste tu país de origen?
     name: entry.538270125
-  - label: Indica los factores determinantes para tu elección de irte al extranjero
+  why:
+    label: Indica los factores determinantes para tu elección de irte al extranjero
     name: entry.1400018492
     choices:
       - label: "Aspectos de la vida laboral (como desempleo, desarrollo profesional, falta de posibilidades en tu país…)"
@@ -190,10 +243,12 @@ es:
       - label: Education (e.g. Masters, PhD, Student Exchange, Erasmus)
         value: education
     choice_other: Otros
-  - label: Cuéntanos algo sobre tu historia
+  story:
+    label: Cuéntanos algo sobre tu historia
     description: "Por ejemplo: ¿Cómo ha empeorado o mejorado tu vida desde que te has mudado? ¿Te sientes un ciudadano europeo? ¿Qué es lo que más o lo que menos echas de menos de tu país? ¿Te llevas más con gente local, de otros países o con otros expatriados? ¿Te sientes integrado o discriminado? ¿Hay algún episodio de tu vida en el extranjero que crees que merece la pena compartir?"
     name: entry.2119500459
-  - label: ¿Eres licenciado?
+  graduated:
+    label: ¿Eres licenciado?
     name: entry.789111768
     choices:
       - label: "Sí"
@@ -202,9 +257,11 @@ es:
         value: notyet
       - label: "No"
         value: "no"
-  - label: ¿Si es así, en qué facultad?
+  faculty:
+    label: ¿Si es así, en qué facultad?
     name: entry.784059732
-  - label: "¿Piensas volver a tu país en algún momento? Si es así:"
+  goback:
+    label: "¿Piensas volver a tu país en algún momento? Si es así:"
     name: entry.582831266
     choices:
       - label: Más de diez años
@@ -221,19 +278,22 @@ es:
         value: hope
       - label: "No"
         value: "no"
-  - label: ¿Estás registrado en la embajada o en el registro civil como residente en el extranjero?
+  registered:
+    label: ¿Estás registrado en la embajada o en el registro civil como residente en el extranjero?
     name: entry.694591779
     choices:
       - label: "Sí"
         value: "yes"
       - label: "No"
         value: "no"
-  - label: "Nombre y dirección de correo:"
+  name:
+    label: "Nombre y dirección de correo:"
     description: Es opcional y no la publicaremos. La usaremos para ponernos en contacto contigo una vez obtenidos los resultados del proyecto y, en su caso, hacerte alguna pregunta añadida sobre tu caso. En caso que nos facilite los mismos, éstos serán tratados de conformidad con la normativa europea y estatal de protección de datos personales con la única finalidad establecida e inserta en el formulario. Para ejercitar los derechos de acceso, rectificación, cancelación y oposición puede enviar su petición al correo electrónico generation.e.project at gmail.com
     name: entry.694591779
 
 it:
-  - label: Di dove sei?
+  from:
+    label: Di dove sei?
     name: "entry.1215076149"
     choices:
       - label: Portogallo
@@ -245,16 +305,20 @@ it:
       - label: Italia
         value: Italy
     choice_other: Altro
-  - label: Dove ti sei trasferito?
+  to:
+    label: Dove ti sei trasferito?
     placeholder: Città, Paese
     name: entry.1534156908
-  - label: Quanti anni hai?
+  age:
+    label: Quanti anni hai?
     name: entry.1540626434
     choice_min: 20 o meno
     choice_max: 40 o più
-  - label: Quando hai lasciato il tuo paese?
+  when:
+    label: Quando hai lasciato il tuo paese?
     name: entry.538270125
-  - label: Quali ragioni ti hanno portato a vivere fuori
+  why:
+    label: Quali ragioni ti hanno portato a vivere fuori
     name: entry.1400018492
     choices:
       - label: "Problemi di lavoro (disoccupazione, carriera, prospettive di lavoro)"
@@ -268,10 +332,12 @@ it:
       - label: Studio (Master, PhD, Erasmus)
         value: education
     choice_other: Altro
-  - label: Raccontaci la tua storia in un testo libero.
+  story:
+    label: Raccontaci la tua storia in un testo libero.
     description: "Alcune domande interessanti: Perché la tua vita è migliorata? Perché è peggiorata? Ti senti «cittadino europeo»? Cosa ti manca di più del tuo paese? Hai fatto amicizia con persone locali, italiani o altri expat? Ti senti integrato o discriminato nella società locale? Un episodio della tua vita all’estero che merita essere raccontato?"
     name: entry.2119500459
-  - label: Sei laureato?
+  graduated:
+    label: Sei laureato?
     name: entry.789111768
     choices:
       - label: "Sì"
@@ -280,9 +346,11 @@ it:
         value: notyet
       - label: "No"
         value: "no"
-  - label: Se sì, in che facoltà?
+  faculty:
+    label: Se sì, in che facoltà?
     name: entry.784059732
-  - label: Tornerai in Italia prima o poi?
+  goback:
+    label: Tornerai in Italia prima o poi?
     name: entry.582831266
     choices:
       - label: Tra più di 10 anni
@@ -299,19 +367,22 @@ it:
         value: hope
       - label: "No"
         value: "no"
-  - label: Sei registrato all’anagrafe degli italiani all’estero?
+  registered:
+    label: Sei registrato all’anagrafe degli italiani all’estero?
     name: entry.694591779
     choices:
       - label: "Sì"
         value: "yes"
       - label: "No"
         value: "no"
-  - label: Nome e email
+  name:
+    label: Nome e email
     description: "È opzionale: non sarà pubblicato e lo useremo soltanto per sapere di più della tua storia e condividere con te i risultati del progetto Generazione E. I tuoi dati personali saranno trattati ai sensi della normativa europea e statale sulla protezione dei dati, con l'unico fine di utilizzarli per questo formulario. Per esercitare i tuoi diritti di accesso, rettificazione e cancellazione, puoi scrivere a generation.e.project at gmail.com"
     name: entry.694591779
 
 pt:
-  - label: De onde és?
+  from:
+    label: De onde és?
     name: "entry.1215076149"
     choices:
       - label: Portugal
@@ -323,16 +394,20 @@ pt:
       - label: Itália
         value: Italy
     choice_other: Outro
-  - label: Para onde te mudaste?
+  to:
+    label: Para onde te mudaste?
     placeholder: Cidade, País
     name: entry.1534156908
-  - label: Que idade tens?
+  age:
+    label: Que idade tens?
     name: entry.1540626434
     choice_min: 20 ou menos
     choice_max: 40 ou mais
-  - label: Quando deixaste o teu país?
+  when:
+    label: Quando deixaste o teu país?
     name: entry.538270125
-  - label: Seleciona os principais fatores que te levaram a viver no estrangeiro.
+  why:
+    label: Seleciona os principais fatores que te levaram a viver no estrangeiro.
     name: entry.1400018492
     choices:
       - label: "Questões laborais (ex: desemprego, evolução na carreira)"
@@ -346,10 +421,12 @@ pt:
       - label: "Educação (ex: Erasmus, mestrado, doutoramento, intercâmbio)"
         value: education
     choice_other: Outro
-  - label: Conta-nos a tua história.
+  story:
+    label: Conta-nos a tua história.
     description: "Algumas pistas: A tua vida melhorou? Porquê? O que piorou? Sentes que és um cidadão europeu? Do que sentes mais falta do teu país? E menos? Costumas socializar com pessoas locais, do teu país ou outros “expats”? Sentes-te integrado? Discriminado? Algum episódio da tua vida no estrangeiro que queiras partilhar?"
     name: entry.2119500459
-  - label: Tens formação superior?
+  graduated:
+    label: Tens formação superior?
     name: entry.789111768
     choices:
       - label: "Sim"
@@ -358,9 +435,11 @@ pt:
         value: notyet
       - label: "Não"
         value: "no"
-  - label: Se sim, qual o grau e a área de especialização?
+  faculty:
+    label: Se sim, qual o grau e a área de especialização?
     name: entry.784059732
-  - label: Vais voltar ao teu país em algum momento?
+  goback:
+    label: Vais voltar ao teu país em algum momento?
     name: entry.582831266
     choices:
       - label: Sim, 10+ anos
@@ -377,13 +456,15 @@ pt:
         value: hope
       - label: "Não"
         value: "no"
-  - label: Estás inscrito no registo civil ou consulado?
+  registered:
+    label: Estás inscrito no registo civil ou consulado?
     name: entry.694591779
     choices:
       - label: "Sim"
         value: "yes"
       - label: "Não"
         value: "no"
-  - label: Nome e email.
+  name:
+    label: Nome e email.
     description: "Opcional — não vai ser publicado. Vamos usá-lo para entrar em contacto assim que sejam publicados os resultados do projecto e, caso necessário, para saber mais sobre a tua história. Caso nos dês esta informação, os dados serão tratados em conformidade com a norma europeia e estatal de protecção de dados pessoais com a única finalidade expressa no formulário. Para exercitares os teus direitos de acesso, rectificação, cancelamento e oposição podes enviar um pedido para o endereço de correio electrónico generation.e.project at gmail.com."
     name: entry.694591779
