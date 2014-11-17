@@ -41,11 +41,13 @@ layout: default
                                 <ul class="ss-choices">
                                   {% for choice in question.choices %}
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-radio" id="group_1215076149_1" name="{{ form.from.name }}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label></li>
+                                        <input class="ss-q-radio" id="group_1215076149_{{ choice.value }}" name="{{ form.from.name }}" required="" type="radio" value="{{ choice.value }}">
+                                        <label for="group_1215076149_{{ choice.value }}">{{ choice.label }}</label></li>
                                   {% endfor %}
 
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-radio ss-q-other-toggle" id="group_1215076149_5" name="{{ form.from.name }}" required="" type="radio" value="__other_option__"><label>{{ question.choice_other }}:</label>
+                                        <input class="ss-q-radio ss-q-other-toggle" id="group_1215076149_5" name="{{ form.from.name }}" required="" type="radio" value="__other_option__">
+                                        <label for="group_1215076149_5">{{ question.choice_other }}:</label>
                                         <input class="ss-q-other" dir="auto" id="entry_1215076149_other_option_response" name="{{ form.from.name }}.other_option_response" type="text" value=""></li>
                                 </ul>
 
@@ -152,12 +154,16 @@ layout: default
 
                                 <ul class="ss-choices ss-choices-required">
                                     {% for choice in question.choices %}
-                                    <li class="ss-choice-item">
-                                        <input class="ss-q-checkbox" id="group_1400018492_1" name="{{ form.why.name }}" type="checkbox" value="{{ choice.value }}"><label>{{ choice.label }}</label></li>
+                                      <li class="ss-choice-item">
+                                          <input class="ss-q-checkbox" id="group_1400018492_{{ choice.value }}" name="{{ form.why.name }}" type="checkbox" value="{{ choice.value }}">
+                                          <label for="group_1400018492_{{ choice.value }}">{{ choice.label }}</label>
+                                      </li>
                                     {% endfor %}
 
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-checkbox ss-q-other-toggle" id="group_1400018492_6" name="{{ form.why.name }}" type="checkbox" value="__other_option__"><label>{{ question.choice_other }}:</label> <input class="ss-q-other" dir="auto" id="entry_1400018492_other_option_response" name="{{ form.why.name }}.other_option_response" type="text" value=""></li>
+                                        <input class="ss-q-checkbox ss-q-other-toggle" id="group_1400018492_6" name="{{ form.why.name }}" type="checkbox" value="__other_option__">
+                                        <label for="group_1400018492_6">{{ question.choice_other }}:</label>
+                                        <input class="ss-q-other" dir="auto" id="entry_1400018492_other_option_response" name="{{ form.why.name }}.other_option_response" type="text" value=""></li>
                                 </ul>
 
                                 <div class="error-message" id="146581853_errorMessage"></div>
@@ -209,7 +215,8 @@ layout: default
 
                                 <div class="ss-choices">
                                     {% for choice in question.choices %}
-                                    <input class="ss-q-radio" id="group_789111768_1" name="{{ form.graduated.name }}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label>
+                                    <input class="ss-q-radio" id="group_789111768_{{ choice.value }}" name="{{ form.graduated.name }}" required="" type="radio" value="{{ choice.value }}">
+                                    <label for="group_789111768_{{ choice.value }}">{{ choice.label }}</label>
                                     {% endfor %}
                                 </div>
 
@@ -258,7 +265,8 @@ layout: default
                                 <ul class="ss-choices">
                                     {% for choice in question.choices %}
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-radio" id="group_582831266_1" name="{{ form.goback.name}}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label></li>
+                                        <input class="ss-q-radio" id="group_582831266_{{ choice.value }}" name="{{ form.goback.name}}" required="" type="radio" value="{{ choice.value }}">
+                                        <label for="group_582831266_{{ choice.value }}">{{ choice.label }}</label></li>
                                     {% endfor %}
                                 </ul>
 
@@ -284,7 +292,8 @@ layout: default
 
                                 <div class="ss-choices">
                                   {% for choice in question.choices %}
-                                    <input class="ss-q-radio" id="group_694591779_1" name="{{ form.registered.name }}" required="" type="radio" value="{{ choice.value }}"><label>{{ choice.label }}</label>
+                                    <input class="ss-q-radio" id="group_694591779_{{ choice.value }}" name="{{ form.registered.name }}" required="" type="radio" value="{{ choice.value }}">
+                                    <label for="group_694591779_{{ choice.value }}">{{ choice.label }}</label>
                                   {% endfor %}
                                 </div>
 
