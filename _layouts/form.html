@@ -7,7 +7,7 @@ layout: default
 {% assign questions=site.data.questions[page.language] %}
 
     <script type="text/javascript">var submitted=false;</script>
-    <iframe name="iframe_txlbrchf" id="iframe_txlbrchf" style="display:none;" onload="if(typeof sent_txlbrchf!='undefined') {window.location='http://generatione.eu/{{ page.language }}/thankyou.html';}"></iframe>
+    <iframe name="iframe_txlbrchf" id="iframe_txlbrchf" style="display:none;" onload="if(typeof sent_txlbrchf!='undefined') {window.location='{{ site.domain }}{{ site.baseurl }}{{ page.language }}/thankyou.html';}"></iframe>
 
     <div class="ss-form-container">
         <div class="ss-top-of-page">

@@ -17,7 +17,7 @@ h1, h2, h3, h4,
 /* Header */
 
 .header {
-    background: #202020 url('http://www.generatione.eu/static/img/header.jpg') no-repeat top right;
+    background: #202020 url('../img/header.jpg') no-repeat top right;
     margin-bottom: 1.25rem;
 }
 
