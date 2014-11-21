@@ -3,6 +3,21 @@ layout: base
 
 ---
 
+{% if page.customColor %}
+<style media="screen">
+  .ss-q-title label {
+    color: {{ page.customColor }};
+  }
+  button, .button {
+    background-color: {{ page.customColor2 }};
+    border-color: {{ page.customColor }};
+  }
+  .ss-form-heading p {
+    border-bottom-color: {{ page.customColor }};
+  }
+</style>
+{% endif %}
+
 </head>
 
 <body class="ss-base-body {{ page.language }}" dir="ltr">
