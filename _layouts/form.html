@@ -26,7 +26,9 @@ layout: default
                 <div class="ss-question-list row collapse">
                     <!-- Coluna esquerda-->
                     <div class="large-4 medium-4 columns">
-                    {% assign question=questions.from %}
+
+                    {% assign key="from" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-radio" dir="ltr">
                             <div class="ss-form-entry">
@@ -41,14 +43,14 @@ layout: default
                                 <ul class="ss-choices">
                                   {% for choice in question.choices %}
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-radio" id="group_1215076149_{{ choice.value }}" name="{{ form.from.name }}" required="" type="radio" value="{{ choice.value }}">
+                                        <input class="ss-q-radio" id="group_1215076149_{{ choice.value }}" name="{{ form[key].name }}" required="" type="radio" value="{{ choice.value }}">
                                         <label for="group_1215076149_{{ choice.value }}">{{ choice.label }}</label></li>
                                   {% endfor %}
 
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-radio ss-q-other-toggle" id="group_1215076149_5" name="{{ form.from.name }}" required="" type="radio" value="__other_option__">
+                                        <input class="ss-q-radio ss-q-other-toggle" id="group_1215076149_5" name="{{ form[key].name }}" required="" type="radio" value="__other_option__">
                                         <label for="group_1215076149_5">{{ question.choice_other }}:</label>
-                                        <input class="ss-q-other" dir="auto" id="entry_1215076149_other_option_response" name="{{ form.from.name }}.other_option_response" type="text" value=""></li>
+                                        <input class="ss-q-other" dir="auto" id="entry_1215076149_other_option_response" name="{{ form[key].name }}.other_option_response" type="text" value=""></li>
                                 </ul>
 
                                 <div class="error-message" id="160901653_errorMessage"></div>
@@ -59,7 +61,9 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.to %}
+
+                    {% assign key="from_city" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-text" dir="ltr">
                             <div class="ss-form-entry">
@@ -70,7 +74,7 @@ layout: default
                                 </div>
 
                                 <div class="ss-q-help ss-secondary-text" dir="ltr">
-                                </div><input class="ss-q-short" dir="auto" id="entry_1534156908" name="{{ form.to.name }}" required="" title="" placeholder="{{ question.placeholder }}" type="text" value="">
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" required="" title="" placeholder="{{ question.placeholder }}" type="text" value="">
 
                                 <div class="error-message" id="181400268_errorMessage"></div>
 
@@ -80,7 +84,55 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.age %}
+
+                    {% assign key="to" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1534156908"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1534156908">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" required="" title="" placeholder="{{ question.placeholder }}" type="text" value="">
+
+                                <div class="error-message" id="181400268_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="to_city" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1534156908"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1534156908">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" required="" title="" placeholder="{{ question.placeholder }}" type="text" value="">
+
+                                <div class="error-message" id="181400268_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="age" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-select" dir="ltr">
                             <div class="ss-form-entry">
@@ -90,7 +142,7 @@ layout: default
                                     <label class="ss-q-item-label" for="entry_1540626434">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
                                 </div>
 
-                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div><select id="entry_1540626434" name="{{ form.age.name }}" required="">
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div><select name="{{ form[key].name }}" required="">
                                     <option value="">
                                         </option>
 
@@ -114,7 +166,9 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.when %}
+
+                    {% assign key="when" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-select" dir="ltr">
                             <div class="ss-form-entry">
@@ -124,7 +178,7 @@ layout: default
                                     <label class="ss-q-item-label" for="entry_538270125">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
                                 </div>
 
-                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div><select id="entry_538270125" name="{{ form.when.name }}" required="">
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div><select name="{{ form[key].name }}" required="">
                                     <option value="">
                                         </option>
                                     {% for i in (1995..2014) reversed %}
@@ -140,7 +194,9 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.why %}
+
+                    {% assign key="why" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-checkbox" dir="ltr">
                             <div class="ss-form-entry">
@@ -155,15 +211,15 @@ layout: default
                                 <ul class="ss-choices ss-choices-required">
                                     {% for choice in question.choices %}
                                       <li class="ss-choice-item">
-                                          <input class="ss-q-checkbox" id="group_1400018492_{{ choice.value }}" name="{{ form.why.name }}" type="checkbox" value="{{ choice.value }}">
+                                          <input class="ss-q-checkbox" id="group_1400018492_{{ choice.value }}" name="{{ form[key].name }}" type="checkbox" value="{{ choice.value }}">
                                           <label for="group_1400018492_{{ choice.value }}">{{ choice.label }}</label>
                                       </li>
                                     {% endfor %}
 
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-checkbox ss-q-other-toggle" id="group_1400018492_6" name="{{ form.why.name }}" type="checkbox" value="__other_option__">
+                                        <input class="ss-q-checkbox ss-q-other-toggle" id="group_1400018492_6" name="{{ form[key].name }}" type="checkbox" value="__other_option__">
                                         <label for="group_1400018492_6">{{ question.choice_other }}:</label>
-                                        <input class="ss-q-other" dir="auto" id="entry_1400018492_other_option_response" name="{{ form.why.name }}.other_option_response" type="text" value=""></li>
+                                        <input class="ss-q-other" dir="auto" id="entry_1400018492_other_option_response" name="{{ form[key].name }}.other_option_response" type="text" value=""></li>
                                 </ul>
 
                                 <div class="error-message" id="146581853_errorMessage"></div>
@@ -177,7 +233,9 @@ layout: default
                     </div><!-- /coluna esquerda -->
                     <!-- Coluna direita -->
                     <div class="large-8 medium-8 columns">
-                    {% assign question=questions.story %}
+
+                    {% assign key="story" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-paragraph-text" dir="ltr">
                             <div class="ss-form-entry">
@@ -190,7 +248,7 @@ layout: default
                                 <div class="ss-q-help ss-secondary-text" dir="ltr">
                                     <label class="ss-q-item-label" for="entry_2119500459">{{ question.description }}</label>
                                 </div>
-                                <textarea class="ss-q-long" cols="0" dir="auto" id="entry_2119500459" name="{{ form.story.name }}" required="" rows="8">
+                                <textarea class="ss-q-long" cols="0" dir="auto" name="{{ form[key].name }}" required="" rows="8">
 </textarea>
 
                                 <div class="error-message" id="523352133_errorMessage"></div>
@@ -201,7 +259,9 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.graduated %}
+
+                    {% assign key="graduated" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-radio" dir="ltr">
                             <div class="ss-form-entry">
@@ -215,7 +275,7 @@ layout: default
 
                                 <div class="ss-choices">
                                     {% for choice in question.choices %}
-                                    <input class="ss-q-radio" id="group_789111768_{{ choice.value }}" name="{{ form.graduated.name }}" required="" type="radio" value="{{ choice.value }}">
+                                    <input class="ss-q-radio" id="group_789111768_{{ choice.value }}" name="{{ form[key].name }}" required="" type="radio" value="{{ choice.value }}">
                                     <label for="group_789111768_{{ choice.value }}">{{ choice.label }}</label>
                                     {% endfor %}
                                 </div>
@@ -228,7 +288,9 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.faculty %}
+
+                    {% assign key="faculty" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-text" dir="ltr">
                             <div class="ss-form-entry">
@@ -240,7 +302,7 @@ layout: default
 
                                 <div class="ss-q-help ss-secondary-text" dir="ltr">
                                     <label class="ss-q-item-label" for="entry_784059732"></label>
-                                </div><input class="ss-q-short" dir="auto" id="entry_784059732" name="{{ form.faculty.name }}" title="" type="text" value="">
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
 
                                 <div class="error-message" id="1891949306_errorMessage"></div>
 
@@ -250,7 +312,57 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.goback %}
+
+                    {% assign key="money" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_784059732">{{ question.label }}</label>
+                                </div><label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_784059732"></label>
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
+
+                                <div class="error-message" id="1891949306_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="money_before" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_784059732">{{ question.label }}</label>
+                                </div><label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_784059732"></label>
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
+
+                                <div class="error-message" id="1891949306_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="goback" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-radio" dir="ltr">
                             <div class="ss-form-entry">
@@ -265,7 +377,7 @@ layout: default
                                 <ul class="ss-choices">
                                     {% for choice in question.choices %}
                                     <li class="ss-choice-item">
-                                        <input class="ss-q-radio" id="group_582831266_{{ choice.value }}" name="{{ form.goback.name}}" required="" type="radio" value="{{ choice.value }}">
+                                        <input class="ss-q-radio" id="group_582831266_{{ choice.value }}" name="{{ form[key].name}}" required="" type="radio" value="{{ choice.value }}">
                                         <label for="group_582831266_{{ choice.value }}">{{ choice.label }}</label></li>
                                     {% endfor %}
                                 </ul>
@@ -278,7 +390,8 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.registered %}
+                    {% assign key="registered" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-item-required ss-radio" dir="ltr">
                             <div class="ss-form-entry">
@@ -292,7 +405,7 @@ layout: default
 
                                 <div class="ss-choices">
                                   {% for choice in question.choices %}
-                                    <input class="ss-q-radio" id="group_694591779_{{ choice.value }}" name="{{ form.registered.name }}" required="" type="radio" value="{{ choice.value }}">
+                                    <input class="ss-q-radio" id="group_694591779_{{ choice.value }}" name="{{ form[key].name }}" required="" type="radio" value="{{ choice.value }}">
                                     <label for="group_694591779_{{ choice.value }}">{{ choice.label }}</label>
                                   {% endfor %}
                                 </div>
@@ -305,7 +418,8 @@ layout: default
                             </div>
                         </div>
                     </div></div>
-                    {% assign question=questions.name %}
+                    {% assign key="name" %}
+                    {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-text" dir="ltr">
                             <div class="ss-form-entry">
@@ -317,7 +431,7 @@ layout: default
 
                                 <div class="ss-q-help ss-secondary-text" dir="ltr">
                                     <label class="ss-q-item-label" for="entry_782757880">{{ question.description }}</label>
-                                </div><input class="ss-q-short" dir="auto" id="entry_782757880" name="{{ form.name.name }}" title="" type="text" value="">
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
 
                                 <div class="error-message" id="1551437931_errorMessage"></div>
 
@@ -338,8 +452,9 @@ layout: default
                         </div>
                     </div>
                 </div>
-                {% assign question=questions.language %}
-                <input name="{{ form.language.name }}" title="" type="hidden" value="{{ page.language }}">
+                {% assign key="language" %}
+                {% assign question=questions[key] %}
+                <input name="{{ form[key].name }}" title="" type="hidden" value="{{ page.language }}">
             </form>
         </div>
         {% unless page.embed %}
