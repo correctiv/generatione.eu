@@ -1,5 +1,5 @@
-baseurl: /generatione.eu/
-domain: https://correctiv.github.io
+baseurl: /
+domain: http://www.generatione.eu
 markdown: kramdown
 
 translations:
