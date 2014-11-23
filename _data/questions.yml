@@ -169,7 +169,7 @@ el:
     label: Που έχεις μεταναστεύσει;
     placeholder:
   to_city:
-    label: "Which city did you move to?"
+    label: "Σε ποιά πόλη έχεις μεταναστεύσει;"
     placeholder:
   age:
     label: Τι ηλικία έχεις;
