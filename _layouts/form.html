@@ -313,7 +313,31 @@ layout: default
                         </div>
                     </div></div>
 
-                    {% assign key="money" %}
+                    {% assign key="pre_migration_job" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_784059732">{{ question.label }}</label>
+                                </div><label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_784059732"></label>
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
+
+                                <div class="error-message" id="1891949306_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="post_migration_job" %}
                     {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-text" dir="ltr">
@@ -338,6 +362,30 @@ layout: default
                     </div></div>
 
                     {% assign key="money_before" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_784059732">{{ question.label }}</label>
+                                </div><label class="ss-q-item-label" for="entry_784059732"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_784059732"></label>
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
+
+                                <div class="error-message" id="1891949306_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="money" %}
                     {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-text" dir="ltr">
@@ -418,7 +466,34 @@ layout: default
                             </div>
                         </div>
                     </div></div>
+
                     {% assign key="name" %}
+                    {% assign question=questions[key] %}
+                    <hr/>
+                    <label>{{ question.description }}</label>
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_782757880"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_782757880">{{ question.label }}:</label>
+                                </div><label class="ss-q-item-label" for="entry_782757880"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_782757880"></label>
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
+
+                                <div class="error-message" id="1551437931_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="email" %}
                     {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
                         <div class="ss-item ss-text" dir="ltr">
@@ -431,6 +506,53 @@ layout: default
 
                                 <div class="ss-q-help ss-secondary-text" dir="ltr">
                                     <label class="ss-q-item-label" for="entry_782757880">{{ question.description }}</label>
+                                </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="email" value="">
+
+                                <div class="error-message" id="1551437931_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="upload_documents" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-paragraph-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_2119500459"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_2119500459">{{ question.label }} <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <textarea class="ss-q-long" cols="0" dir="auto" name="{{ form[key].name }}" rows="3">
+</textarea>
+
+                                <div class="error-message" id="523352133_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
+                    {% assign key="social_media" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-text" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_782757880"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_782757880">{{ question.label }}:</label>
+                                </div><label class="ss-q-item-label" for="entry_782757880"></label>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr">
+                                    <label class="ss-q-item-label" for="entry_782757880"></label>
                                 </div><input class="ss-q-short" dir="auto" name="{{ form[key].name }}" title="" type="text" value="">
 
                                 <div class="error-message" id="1551437931_errorMessage"></div>
@@ -441,6 +563,7 @@ layout: default
                             </div>
                         </div>
                     </div></div>
+
                     </div><!-- /coluna direita --><input name="draftResponse" type="hidden" value="[,,&quot;5690517492085032966&quot;] "> <input name="pageHistory" type="hidden" value="0"> <input name="fbzx" type="hidden" value="5690517492085032966">
 
                     <div class="ss-item ss-navigate">

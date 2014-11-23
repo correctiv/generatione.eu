@@ -20,6 +20,10 @@ all:
     name: "entry.1924092624"
   faculty:
     name: "entry.1710563149"
+  pre_migration_job:
+    name: "entry.1011150004"
+  post_migration_job:
+    name: "entry.1152148392"
   money:
     name: "entry.34968334"
   money_before:
@@ -30,10 +34,14 @@ all:
     name: "entry.1451489277"
   name:
     name: "entry.157648082"
+  email:
+    name: "entry.197944284"
+  upload_documents:
+    name: "entry.1812274216"
+  social_media:
+    name: "entry.256476165"
   publishing:
     name: "entry.615376130"
-  social_media:
-    name: "entry.971897056"
   language:
     name: "entry.1063892500"
 
@@ -51,13 +59,13 @@ en:
         value: Italy
     choice_other: Other
   from_city:
-    label: "From which city did you move?"
+    label: "Which city did you move from?"
   to:
     label: Which country did you move to?
-    placeholder: Country
+    placeholder:
   to_city:
     label: "Which city did you move to?"
-    placeholder: City
+    placeholder:
   age:
     label: How old are you?
     choice_min: 20 or younger
@@ -79,10 +87,10 @@ en:
         value: education
     choice_other: Other
   story:
-    label: Tell us your story
-    description: "E.g.: Why is your life better and why worse? Do you feel a European citizen? What do you miss the most and what the least of your country? Do you socialize with locals, people from the same country or other expats? Do you feel integrated or discriminated? An episode of your life abroad you think it’s worth sharing?"
+    label: Share your story with us.
+    description: "We would love to hear as much as possible about it and how your life has changed after your move."
   graduated:
-    label: Are you graduated?
+    label: Did you graduate?
     choices:
       - label: "Yes"
         value: "yes"
@@ -92,12 +100,8 @@ en:
         value: "no"
   faculty:
     label: If yes, which faculty?
-  money:
-    label: How much money per hour do you earn now (in Euro)?
-  money_before:
-    label: How much money per hour did you earn before (in Euro)?
   goback:
-    label: Will you go back to your country at some point?
+    label: "Will you go back to your country at some point?"
     choices:
       - label: Yes, in 10+ years
         value: 10+
@@ -120,9 +124,31 @@ en:
         value: "yes"
       - label: "No"
         value: "no"
+  pre_migration_job:
+    label: "Pre-migration job (optional)"
+  post_migration_job:
+    label: "Post-migration job (optional)"
+  money_before:
+    label: "Pre-migration salary per month (in Euro, optional)"
+  money:
+    label: "Post-migration salary per month (in Euro, optional)"
   name:
-    label: Your name and email address
-    description: Optional —  it won’t be published, we’ll use it to get in touch with you and know more about your story. We’ll also share with you the results of our project.
+    label: "Your name"
+    description: "The following information is optional and won't be published or shared with others. We will use it to contact and get to know more about you and your story. We will also share with you the results of our project. Your data will be used according to the current European and national laws on data protection. To access, modify or delete your data, please contact us at generation.e.project at gmail.com"
+  email:
+    label: "Your email-address"
+  social_media:
+    label: "Social Media"
+  upload_documents:
+    label: "Upload: Do you have any pictures, videos or documents you would like to share with us? Please upload them here."
+  publishing:
+    label: ""
+    choices:
+      - label: "Yes"
+        value: "yes"
+      - label: "No"
+        value: "no"
+
 
 el:
   from:
@@ -137,9 +163,14 @@ el:
       - label: Ιταλία
         value: Italy
     choice_other: Άλλο
+  from_city:
+    label: "Από ποια πόλη έφυγες;"
   to:
     label: Που έχεις μεταναστεύσει;
-    placeholder: πόλη, χώρα
+    placeholder:
+  to_city:
+    label: "Which city did you move to?"
+    placeholder:
   age:
     label: Τι ηλικία έχεις;
     choice_min: 20 ή λιγότερο
@@ -162,7 +193,7 @@ el:
     choice_other: Άλλο
   story:
     label: Πες μας την ιστορία σου.
-    description: "π.χ.: Γιατί έχει βελτιωθεί η ζωή σου και γιατί έχει επιδεινωθεί; Αιθάνεσαι Ευρωπαίος Πολίτης; Τι σου λείπει περισσότερο και τι λιγότερο από τη χώρα σου; Έχεις κοινωνικές σχέσεις με ντόπιους, συμπατριώτες σου ή άλλους μετανάστες; Νιώθεις πως έχεις ενσωματωθεί; Έχεις υποστεί διακρίσεις; Υπάρχει κάποιο περιστατικό της ζωής σου στο εξωτερικό που θα ήθελες να μοιραστείς μαζί μας;"
+    description: "Αν θέλεις μπορείς να διηγηθείς με λεπτομέρειες την ιστορία σου και τις αλλαγές στη ζωή σου πριν και μετά τη μετανάστευση."
   graduated:
     label: Είσαι απόφοιτος τριτοβάθμιας εκπαίδευσης;
     choices:
@@ -198,9 +229,31 @@ el:
         value: "yes"
       - label: "Ναι"
         value: "no"
+  pre_migration_job:
+    label: "Θέση εργασίας πριν τη μετανάστευση (πραιρετικά)"
+  post_migration_job:
+    label: "Θέση εργασίας μετά τη μετανάστευση (προαιρετικά)"
+  money_before:
+    label: "Πόσα χρήματα κέρδιζες μηνιαίως πριν μεταναστεύσεις; (σε ευρώ, προαιρετικά)"
+  money:
+    label: "Πόσα χρήματα κερδίζεις τώρα μηνιαίως; (σε ευρώ, προαιρετικά)"
   name:
-    label: "Όνομα και ηλεκτρονική διεύθυνση"
-    description: προαιρετικά —  δεν θα δημοσιευτούν, θα χρησιμοποιηθούν ώστε να έρθουμε σε επαφή μαζί σου και να μάθουμε την ιστορία σου. Επιπλέον θα χρησιμοποιηθούν για να σε ενημερώσουμε για τα αποτελέσματα της έρευνάς μας και, εάν χρειαστεί, για να σου κάνουμε κάποια επιπρόσθετη ερώτηση σχετικά με την ιστορία σου. Σε περίπτωση που μας απαντήσεις τα στοιχεία που θα μας παρέχεις θα αντιμετωπιστούν σύμφωνα με την εθνική και ευρωπαϊκή νομοθεσία για την προστασία των προσωπικών δεδομενων, με αποκλειστικό σκοπό αυτόν που περιγράφεται στο ερωτηματολόγιο. Για να ασκήσεις το δικαίωμα της πρόσβασης, διόρθωσης, ακύρωσης ή αντίρρησης μπορείς να επικοινωνήσεις μαζί μας στην ηλεκτρονική διεύθυνση generation.e.project at gmail.com
+    label: "Όνομα"
+    description: "Προαιρετικά — δεν θα δημοσιευτούν, θα χρησιμοποιηθούν ώστε να έρθουμε σε επαφή μαζί σου και να μάθουμε την ιστορία σου. Επιπλέον θα χρησιμοποιηθούν για να σε ενημερώσουμε για τα αποτελέσματα της έρευνάς μας και, εάν χρειαστεί, για να σου κάνουμε κάποια επιπρόσθετη ερώτηση σχετικά με την ιστορία σου. Σε περίπτωση που μας απαντήσεις τα στοιχεία που θα μας παρέχεις θα αντιμετωπιστούν σύμφωνα με την εθνική και ευρωπαϊκή νομοθεσία για την προστασία των προσωπικών δεδομενων, με αποκλειστικό σκοπό αυτόν που περιγράφεται στο ερωτηματολόγιο. Για να ασκήσεις το δικαίωμα της πρόσβασης, διόρθωσης, ακύρωσης ή αντίρρησης μπορείς να επικοινωνήσεις μαζί μας στην ηλεκτρονική διεύθυνση generation.e.project at gmail.com"
+  email:
+    label: "Email"
+  social_media:
+    label: "Λογαριασμός σε Facebook ή Twitter"
+  upload_documents:
+    label: "Upload. Έχεις κάποιες φωτογραφίες, βίντεο ή κείμενα που θα ήθελες να μοιραστείς μαζί μας; Μπορείς να τις ανεβάσεις εδώ."
+  publishing:
+    label: ""
+    choices:
+      - label: "Όχι"
+        value: "yes"
+      - label: "Ναι"
+        value: "no"
+
 
 es:
   from:
@@ -215,9 +268,14 @@ es:
       - label: Italia
         value: Italy
     choice_other: Otro
+  from_city:
+    label: "¿De qué ciudad te has ido?"
   to:
-    label: ¿Adónde te has mudado?
-    placeholder: País y Ciudad
+    label: ¿A qué país te has ido?
+    placeholder:
+  to_city:
+    label: "¿A qué ciudad te has ido?"
+    placeholder:
   age:
     label: ¿Cuántos años tienes?
     choice_min: 20 o menos
@@ -233,14 +291,14 @@ es:
         value: sentimental
       - label: Razones políticas
         value: political
-      - label: Personal
+      - label: Ambiciones personales
         value: personal
       - label: Education (e.g. Masters, PhD, Student Exchange, Erasmus)
         value: education
     choice_other: Otros
   story:
-    label: Cuéntanos algo sobre tu historia
-    description: "Por ejemplo: ¿Cómo ha empeorado o mejorado tu vida desde que te has mudado? ¿Te sientes un ciudadano europeo? ¿Qué es lo que más o lo que menos echas de menos de tu país? ¿Te llevas más con gente local, de otros países o con otros expatriados? ¿Te sientes integrado o discriminado? ¿Hay algún episodio de tu vida en el extranjero que crees que merece la pena compartir?"
+    label: Cuéntanos algo de tu historia.
+    description: Nos gustaría conocer los detalles de tu experiencia y cómo ha cambiado tu vida desde que has emigrado.
   graduated:
     label: ¿Eres licenciado?
     choices:
@@ -276,9 +334,30 @@ es:
         value: "yes"
       - label: "No"
         value: "no"
+  pre_migration_job:
+    label: "Ocupación en tu país de origen (opcional)"
+  post_migration_job:
+    label: "Ocupación después de haber emigrado (opcional)"
+  money_before:
+    label: "¿Cuál era tu sueldo mensual (en euros) antes de dejar tu país? (opcional)"
+  money:
+    label: "¿Cuál es tu sueldo mensual (en euros) en la actualidad? (opcional)"
   name:
-    label: "Nombre y dirección de correo:"
-    description: Es opcional y no la publicaremos. La usaremos para ponernos en contacto contigo una vez obtenidos los resultados del proyecto y, en su caso, hacerte alguna pregunta añadida sobre tu caso. En caso que nos facilite los mismos, éstos serán tratados de conformidad con la normativa europea y estatal de protección de datos personales con la única finalidad establecida e inserta en el formulario. Para ejercitar los derechos de acceso, rectificación, cancelación y oposición puede enviar su petición al correo electrónico generation.e.project at gmail.com
+    label: "Nombre"
+    description: "Es opcional y no la publicaremos. La usaremos para ponernos en contacto contigo una vez obtenidos los resultados del proyecto y, en su caso, hacerte alguna pregunta añadida sobre tu caso. En caso que nos facilite los mismos, éstos serán tratados de conformidad con la normativa europea y estatal de protección de datos personales con la única finalidad establecida e inserta en el formulario. Para ejercitar los derechos de acceso, rectificación, cancelación y oposición puede enviar su petición al correo electrónico generation.e.project at gmail.com"
+  email:
+    label: "Correo electrónico"
+  social_media:
+    label: "Redes sociales. Si te apetece, comparte un enlace a tu perfil en Facebook o en Twitter"
+  upload_documents:
+    label: "Upload. Si quieres, sube una foto o un vídeo que te gustaría compartir con el proyecto."
+  publishing:
+    label: ""
+    choices:
+      - label: "Yes"
+        value: "yes"
+      - label: "No"
+        value: "no"
 
 it:
   from:
@@ -293,9 +372,14 @@ it:
       - label: Italia
         value: Italy
     choice_other: Altro
+  from_city:
+    label: "Città di provenienza"
   to:
-    label: Dove ti sei trasferito?
-    placeholder: Città, Paese
+    label: In che paese ti sei trasferito?
+    placeholder:
+  to_city:
+    label: "In che città ti sei trasferito?"
+    placeholder:
   age:
     label: Quanti anni hai?
     choice_min: 20 o meno
@@ -318,7 +402,7 @@ it:
     choice_other: Altro
   story:
     label: Raccontaci la tua storia in un testo libero.
-    description: "Alcune domande interessanti: Perché la tua vita è migliorata? Perché è peggiorata? Ti senti «cittadino europeo»? Cosa ti manca di più del tuo paese? Hai fatto amicizia con persone locali, italiani o altri expat? Ti senti integrato o discriminato nella società locale? Un episodio della tua vita all’estero che merita essere raccontato?"
+    description: "Ci piacerebbe conoscere i dettagli della tua storia e come è cambiata la tua vita da prima a dopo la migrazione."
   graduated:
     label: Sei laureato?
     choices:
@@ -354,9 +438,30 @@ it:
         value: "yes"
       - label: "No"
         value: "no"
+  pre_migration_job:
+    label: "Occupazione prima del trasferimento (opzionale)"
+  post_migration_job:
+    label: "Occupazione dopo il trasferimento (opzionale)"
+  money_before:
+    label: "Salario mensile prima del trasferimento (in euro, opzionale)"
+  money:
+    label: "Salario mensile dopo il trasferimento (in euro, opzionale)"
   name:
-    label: Nome e email
-    description: "È opzionale: non sarà pubblicato e lo useremo soltanto per sapere di più della tua storia e condividere con te i risultati del progetto Generazione E. I tuoi dati personali saranno trattati ai sensi della normativa europea e statale sulla protezione dei dati, con l'unico fine di utilizzarli per questo formulario. Per esercitare i tuoi diritti di accesso, rettificazione e cancellazione, puoi scrivere a generation.e.project at gmail.com"
+    label: "Nome"
+    description: "È opzionale e non sarà pubblicato. Lo useremo soltanto per sapere di più della tua storia e condividere con te i risultati del progetto Generazione E. I tuoi dati personali saranno trattati ai sensi della normativa europea e statale sulla protezione dei dati, con l'unico fine di utilizzarli per questo formulario. Per esercitare i tuoi diritti di accesso, rettificazione e cancellazione, puoi scrivere a generation.e.project at gmail.com"
+  email:
+    label: "Email"
+  social_media:
+    label: "Facebook o Twitter (opzionale)"
+  upload_documents:
+    label: "Upload. Carica una foto o un video che vuoi condividere con noi."
+  publishing:
+    label: ""
+    choices:
+      - label: "Sì"
+        value: "yes"
+      - label: "No"
+        value: "no"
 
 pt:
   from:
@@ -371,9 +476,13 @@ pt:
       - label: Itália
         value: Italy
     choice_other: Outro
+  from_city:
+    label: "De que cidade saíste?"
   to:
     label: Para onde te mudaste?
-    placeholder: Cidade, País
+    placeholder:
+  to_city:
+    label: Em que cidade estás a viver?
   age:
     label: Que idade tens?
     choice_min: 20 ou menos
@@ -395,8 +504,8 @@ pt:
         value: education
     choice_other: Outro
   story:
-    label: Conta-nos a tua história.
-    description: "Algumas pistas: A tua vida melhorou? Porquê? O que piorou? Sentes que és um cidadão europeu? Do que sentes mais falta do teu país? E menos? Costumas socializar com pessoas locais, do teu país ou outros “expats”? Sentes-te integrado? Discriminado? Algum episódio da tua vida no estrangeiro que queiras partilhar?"
+    label: Partilha conosco a tua história.
+    description: "Gostaríamos muito de saber os detalhes e como é que a tua vida mudou depois de deixares o teu país."
   graduated:
     label: Tens formação superior?
     choices:
@@ -432,6 +541,27 @@ pt:
         value: "yes"
       - label: "Não"
         value: "no"
+  pre_migration_job:
+    label: "Ocupação profissional antes da emigração (opcional)"
+  post_migration_job:
+    label: "Ocupação profissional depois da emigração (opcional)"
+  money_before:
+    label: "Qual era o teu salário mensal antes de emigrares (em euros, opcional)?"
+  money:
+    label: "Qual é o teu salário mensal depois de emigrares (em euros, opcional)?"
   name:
-    label: Nome e email.
+    label: "O teu nome"
     description: "Opcional — não vai ser publicado. Vamos usá-lo para entrar em contacto assim que sejam publicados os resultados do projecto e, caso necessário, para saber mais sobre a tua história. Caso nos dês esta informação, os dados serão tratados em conformidade com a norma europeia e estatal de protecção de dados pessoais com a única finalidade expressa no formulário. Para exercitares os teus direitos de acesso, rectificação, cancelamento e oposição podes enviar um pedido para o endereço de correio electrónico generation.e.project at gmail.com."
+  email:
+    label: "O teu endereço de email"
+  social_media:
+    label: "Facebook ou Twitter (opcional)"
+  upload_documents:
+    label: "Upload. Carrega uma fotografia ou um vídeo que te apeteça partilhar com o projecto."
+  publishing:
+    label: ""
+    choices:
+      - label: "Sim"
+        value: "yes"
+      - label: "Não"
+        value: "no"
