@@ -140,7 +140,7 @@ en:
   social_media:
     label: "Social Media"
   upload_documents:
-    label: "Upload: Do you have any pictures, videos or documents you would like to share with us? Please upload them here."
+    label: "Upload: Do you have any pictures, videos or documents you would like to share with us? Please share some links here"
   publishing:
     label: ""
     choices:
@@ -350,7 +350,7 @@ es:
   social_media:
     label: "Redes sociales. Si te apetece, comparte un enlace a tu perfil en Facebook o en Twitter"
   upload_documents:
-    label: "Upload. Si quieres, sube una foto o un vídeo que te gustaría compartir con el proyecto."
+    label: "Upload. Si quieres, sube una foto o un vídeo que te gustaría compartir con el proyecto (URLs)."
   publishing:
     label: ""
     choices:
@@ -454,7 +454,7 @@ it:
   social_media:
     label: "Facebook o Twitter (opzionale)"
   upload_documents:
-    label: "Upload. Carica una foto o un video che vuoi condividere con noi."
+    label: "Upload. Carica una foto o un video che vuoi condividere con noi (mettendo i link)."
   publishing:
     label: ""
     choices:
@@ -557,7 +557,7 @@ pt:
   social_media:
     label: "Facebook ou Twitter (opcional)"
   upload_documents:
-    label: "Upload. Carrega uma fotografia ou um vídeo que te apeteça partilhar com o projecto."
+    label: "Upload. Carrega uma fotografia ou um vídeo que te apeteça partilhar com o projecto (URLs)."
   publishing:
     label: ""
     choices:
