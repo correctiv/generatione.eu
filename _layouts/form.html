@@ -313,6 +313,36 @@ layout: default
                         </div>
                     </div></div>
 
+                    {% assign key="goback" %}
+                    {% assign question=questions[key] %}
+                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
+                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-item-label" for="entry_1360717968"></label>
+
+                                <div class="ss-q-title">
+                                    <label class="ss-q-item-label" for="entry_1360717968">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
+                                </div>
+
+                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+
+                                <ul class="ss-choices">
+                                    {% for choice in question.choices %}
+                                    <li class="ss-choice-item">
+                                        <input class="ss-q-radio" id="group_582831266_{{ choice.value }}" name="{{ form[key].name}}" required="" type="radio" value="{{ choice.value }}">
+                                        <label for="group_582831266_{{ choice.value }}">{{ choice.label }}</label></li>
+                                    {% endfor %}
+                                </ul>
+
+                                <div class="error-message" id="1360717968_errorMessage"></div>
+
+                                <div class="required-message">
+                                    {{ site.translations[page.language].required }}
+                                </div>
+                            </div>
+                        </div>
+                    </div></div>
+
                     {% assign key="pre_migration_job" %}
                     {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
@@ -409,35 +439,6 @@ layout: default
                         </div>
                     </div></div>
 
-                    {% assign key="goback" %}
-                    {% assign question=questions[key] %}
-                    <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
-                        <div class="ss-item ss-item-required ss-radio" dir="ltr">
-                            <div class="ss-form-entry">
-                                <label class="ss-q-item-label" for="entry_1360717968"></label>
-
-                                <div class="ss-q-title">
-                                    <label class="ss-q-item-label" for="entry_1360717968">{{ question.label }}<span class="ss-required-asterisk">*</span> <label for="itemView.getDomIdToLabel()"></label> </label>
-                                </div>
-
-                                <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-
-                                <ul class="ss-choices">
-                                    {% for choice in question.choices %}
-                                    <li class="ss-choice-item">
-                                        <input class="ss-q-radio" id="group_582831266_{{ choice.value }}" name="{{ form[key].name}}" required="" type="radio" value="{{ choice.value }}">
-                                        <label for="group_582831266_{{ choice.value }}">{{ choice.label }}</label></li>
-                                    {% endfor %}
-                                </ul>
-
-                                <div class="error-message" id="1360717968_errorMessage"></div>
-
-                                <div class="required-message">
-                                    {{ site.translations[page.language].required }}
-                                </div>
-                            </div>
-                        </div>
-                    </div></div>
                     {% assign key="registered" %}
                     {% assign question=questions[key] %}
                     <div class="ss-form-question row errorbox-good"><div class="large-12 medium-12 columns">
