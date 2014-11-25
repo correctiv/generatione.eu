@@ -389,7 +389,7 @@ it:
   why:
     label: Quali ragioni ti hanno portato a vivere fuori
     choices:
-      - label: "Problemi di lavoro (disoccupazione, carriera, prospettive di lavoro)"
+      - label: "Questioni di lavoro (disoccupazione, carriera, prospettive di lavoro)"
         value: work
       - label: "Ragioni sentimentali"
         value: sentimental
