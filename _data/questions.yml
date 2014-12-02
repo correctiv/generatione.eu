@@ -149,7 +149,7 @@ en:
       - label: "No"
         value: "no"
 
-en:
+de:
   from:
     label: Wo kommst Du her?
     choices:
@@ -177,7 +177,7 @@ en:
   when:
     label: Wann hast Du Dein Land verlassen?
   why:
-    label: Wähle die Gründe aus, warum Du im Ausland lebst:
+    label: "Wähle die Gründe aus, warum Du im Ausland lebst:"
     choices:
       - label: "Arbeitsgründe (zum Beispiel Arbeitslosigkeit, Karriere, schwierige Perspektive)"
         value: work
@@ -191,7 +191,7 @@ en:
         value: education
     choice_other: Sonstiges
   story:
-    label: Teile Deine Geschichte mit uns:
+    label: "Teile Deine Geschichte mit uns:"
     description: "Wir würden uns freuen, wenn Du uns so viel wie möglich von Dir erzählst und besonders, wie sich Dein Leben nach dem Umzug verändert hat."
   graduated:
     label: Hast Du einen Hochschulabschluss?
