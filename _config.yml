@@ -13,6 +13,16 @@ translations:
     headline: European Youth Migration Data-driven Project
     sub_headline: Crowdsourcing stories from Spanish, Italian, Portuguese and Greek expats.
     form_action: https://docs.google.com/forms/d/1AYU7qLOGf8IniifdletWEl3y_9Km674Bf_q_kZ7wVcw/formResponse
+  de:
+    about: Über uns
+    contact: Kontakt
+    required: Diese Angaben sind erforderlich
+    required_star: erforderlich
+    submit: Bestätigen
+    title: Generation E, the european young expats
+    headline: Ein Datenprojekt zu europäischer Jugend-Abwanderung
+    sub_headline: Crowdsourcing-Storys über Auswanderer aus Spanien, Italien, Portugal und Griechenland
+    form_action: https://docs.google.com/forms/d/1AYU7qLOGf8IniifdletWEl3y_9Km674Bf_q_kZ7wVcw/formResponse
   el:
     about: Ποιοι είμαστε
     contact: Επικοινωνία
