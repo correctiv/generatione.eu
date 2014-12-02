@@ -149,6 +149,109 @@ en:
       - label: "No"
         value: "no"
 
+en:
+  from:
+    label: Wo kommst Du her?
+    choices:
+      - label: Portugal
+        value: Portugal
+      - label: Griechenland
+        value: Greece
+      - label: Spanien
+        value: Spain
+      - label: Italien
+        value: Italy
+    choice_other: Andere Länder
+  from_city:
+    label: "Aus welcher Stadt bist Du weggezogen?"
+  to:
+    label: In welches Land bist Du gezogen?
+    placeholder:
+  to_city:
+    label: "In welche Stadt bist Du gezogen?"
+    placeholder:
+  age:
+    label: Wie alt bist du?
+    choice_min: 20 or younger
+    choice_max: 40 or older
+  when:
+    label: Wann hast Du Dein Land verlassen?
+  why:
+    label: Wähle die Gründe aus, warum Du im Ausland lebst:
+    choices:
+      - label: "Arbeitsgründe (zum Beispiel Arbeitslosigkeit, Karriere, schwierige Perspektive)"
+        value: work
+      - label: "sentimentale Gründe"
+        value: sentimental
+      - label: politische Gründe
+        value: political
+      - label: persönliche Herausforderung (Abenteuer, Neugier, Fernweh...)
+        value: personal
+      - label: Ausbildung (zum Beispiel Master, Doktor, studentischer Austausch, Erasmus)
+        value: education
+    choice_other: Sonstiges
+  story:
+    label: Teile Deine Geschichte mit uns:
+    description: "Wir würden uns freuen, wenn Du uns so viel wie möglich von Dir erzählst und besonders, wie sich Dein Leben nach dem Umzug verändert hat."
+  graduated:
+    label: Hast Du einen Hochschulabschluss?
+    choices:
+      - label: "Ja"
+        value: "yes"
+      - label: "Noch nicht"
+        value: notyet
+      - label: "Nicht"
+        value: "no"
+  faculty:
+    label: Falls ja, in welchem Fachbereich?
+  goback:
+    label: "Möchtest Du irgendwann in Dein Land zurückziehen?"
+    choices:
+      - label: Ja, in mehr als 10 Jahren
+        value: 10+
+      - label: Ja, in 5-10 Jahren
+        value: 5-10
+      - label: Ja, in 2-5 Jahren
+        value: 2-5
+      - label: Ja, in 1-2 Jahren
+        value: 1-2
+      - label: Ja, im nächsten Jahr
+        value: 1
+      - label: Ich hoffe es
+        value: hope
+      - label: "Nein"
+        value: "no"
+  registered:
+    label: Bist Du in einem Bürgeramt oder Konsulat erfasst?
+    choices:
+      - label: "Ja"
+        value: "yes"
+      - label: "Nein"
+        value: "no"
+  pre_migration_job:
+    label: "Arbeit vor dem Umzug (optional)"
+  post_migration_job:
+    label: "Arbeit nach dem Umzug (optional)"
+  money_before:
+    label: "Gehalt pro Monat im Job vor dem Umzug (in Euro, optional)"
+  money:
+    label: "Gehalt pro Monat im Job nach dem Umzug (in Euro, optional)"
+  name:
+    label: "Dein Name"
+    description: "Die folgenden Informationen sind optional und werden nicht veröffentlicht oder mit anderen Personen geteilt. Wir werden sie ausschließlich nutzen, um Dich zu kontaktieren und Dich und Deine Geschichte näher kennenzulernen. Wir werden mit Dir die Ergebnisse des Projektes teilen. Deine Daten werden im Rahmen der aktuellen europäischen und nationalen Datenschutzbestimmungen erfasst. Wenn Du Deine Daten einsehen, bearbeiten oder löschen möchtest, schreib uns bitte eine E-Mail an generation.e.project at gmail.com"
+  email:
+    label: "Deine E-Mail Adresse"
+  social_media:
+    label: "Social Media"
+  upload_documents:
+    label: "Upload: Hast Du irgendwelche Bilder, Videos oder Dokumente, die Du mit uns teilen möchtest? Bitte lade Sie hier hoch."
+  publishing:
+    label: ""
+    choices:
+      - label: "Yes"
+        value: "yes"
+      - label: "No"
+        value: "no"
 
 el:
   from:
@@ -389,7 +492,7 @@ it:
   why:
     label: Quali ragioni ti hanno portato a vivere fuori
     choices:
-      - label: "Problemi di lavoro (disoccupazione, carriera, prospettive di lavoro)"
+      - label: "Questioni di lavoro (disoccupazione, carriera, prospettive di lavoro)"
         value: work
       - label: "Ragioni sentimentali"
         value: sentimental
